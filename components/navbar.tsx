@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes, faHome } from '@fortawesome/free-solid-svg-icons';
+import { Repeat } from 'lucide-react';
+import { exit } from 'process';
 
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -17,10 +19,14 @@ export default function Navbar() {
             opacity: 1,
             x: 0,
             transition: {
-                staggerChildren: 0.2,
-                type: "spring",
-                stiffness: 100, // Increase stiffness to reduce springiness
-                damping: 20, // Increase damping to reduce oscillation
+                type: "tween",
+            },
+        },
+        exit: {
+            opacity: 0,
+            x: 100,
+            transition: {
+                type: "tween",
             },
         },
     };
@@ -46,7 +52,7 @@ export default function Navbar() {
                                 scale: 1.2,
                                 transition: { duration: 0.2 },
                             }}
-                            whileTap={{ scale: 0.9 }}
+                            whileTap={{ scale: 1.2, transition: { duration: 0.2 } }}
                         >
                         <FontAwesomeIcon icon={faHome} size='2xl' className='' />
                         </motion.button>
@@ -56,13 +62,16 @@ export default function Navbar() {
                 <section className='z-50'>
                     {/* if menu is open (true) render the X icon */}
                     {menuOpen ?
-                        <AnimatePresence>
+                        <AnimatePresence initial={false} mode='wait'>
                             <motion.button 
+                                key={"close"}
+                                exit={{ opacity: 0, transform: 'rotate(180deg)' }}
+                                transition={{ duration: 0.3 }}
                                 whileHover={{
                                     scale: 1.2,
                                     transition: { duration: 0.2 },
                                 }}
-                                whileTap={{ scale: 0.9 }
+                                whileTap={{ scale: 1.2, transition: { duration: 0.2 }}
                                 }
                                 onClick={toggleMenu} 
                                 className='btn w-10 h-10 z-50'>
@@ -71,15 +80,23 @@ export default function Navbar() {
                         </AnimatePresence>
                         :
                         /* if menu is not open, render the 3 bars icon */
-                        <AnimatePresence>
-                            <motion.button 
+                        <AnimatePresence initial={false} mode='wait'>
+                            <motion.button
+                                key={"open"} 
+                                exit={{ opacity: 0, transform: 'rotate(180deg)' }}
+                                transition={{ duration: 0.3 }}
+
                                 whileHover={{
                                     scale: 1.2,
-                                    transition: { duration: 0.2 },
+                                    transition: { duration: 0.1 },
                                 }}
-                                whileTap={{ scale: 0.9}
-                                }
-                                onClick={toggleMenu} 
+                                whileTap={{ 
+                                    scale: 1.2,
+                                    transition: { duration: 0.1 },
+                                }}
+                                onClick={()=> {
+                                    toggleMenu();
+                                }} 
                                 className='btn w-10 h-10 z-50'>
                                 <FontAwesomeIcon icon={faBars} size='2xl' />
                             </motion.button>
@@ -91,9 +108,13 @@ export default function Navbar() {
             <AnimatePresence>
                 {menuOpen && (
                     <motion.section
-                        
+                        key={"menu"}
+                        initial='hidden'
+                        animate='visible'
+                        exit='hidden'
                         variants={menuVariants}
-                        className='absolute z-30 top-0 right-0 w-3/4 h-full bg-gray-900'
+                        transition={{ type: 'inertia', duration: 0.4 }}
+                        className='rounded-l-3xl fixed z-30 top-0 right-0 w-3/4 h-full bg-black border border-white'
                     >
                         <div className='flex flex-col space-y-10 p-10 mt-10 text-3xl'>
                             <motion.div variants={itemVariants}>
