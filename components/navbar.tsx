@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
-import Burger from "@/components/burger";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faTimes, faHome } from '@fortawesome/free-solid-svg-icons';
 
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -30,38 +31,78 @@ export default function Navbar() {
     };
 
     return (
-        <nav className='border-red-500 border-4 px-10'>
-            <motion.div 
-                initial={{ y: -100 }} 
-                animate={{ y: 0 }} 
-                transition={{ type: "spring", stiffness: 100, damping: 20 }} // Adjust transition properties
+        <nav className='border-red-500 border-4 px-5'>
+            <motion.div
+                initial={{ y: -100 }}
+                animate={{ y: 0 }}
+                transition={{ type: "spring", stiffness: 100, damping: 17 }} // Adjust transition properties
+                className='flex flex-row items-center place-content-between py-2'
             >
-                <section className='flex flex-row place-content-between px-3 py-4'>
+                {/* home btn */}
+                <section className=''>
                     <Link href={"/"}>
-                        <h2 className='text-2xl font-semibold'>Sanan</h2>
+                        <motion.button
+                            whileHover={{
+                                scale: 1.2,
+                                transition: { duration: 0.2 },
+                            }}
+                            whileTap={{ scale: 0.9 }}
+                        >
+                        <FontAwesomeIcon icon={faHome} size='2xl' className='' />
+                        </motion.button>
                     </Link>
-                    <button onClick={toggleMenu} className='btn w-10 h-10 bg-black z-50'>
-                        <Burger />
-                    </button>
+                </section>
+                {/* nav menu mobile */}
+                <section className='z-50'>
+                    {/* if menu is open (true) render the X icon */}
+                    {menuOpen ?
+                        <AnimatePresence>
+                            <motion.button 
+                                whileHover={{
+                                    scale: 1.2,
+                                    transition: { duration: 0.2 },
+                                }}
+                                whileTap={{ scale: 0.9 }
+                                }
+                                onClick={toggleMenu} 
+                                className='btn w-10 h-10 z-50'>
+                                <FontAwesomeIcon icon={faTimes} size='2xl' />
+                            </motion.button>
+                        </AnimatePresence>
+                        :
+                        /* if menu is not open, render the 3 bars icon */
+                        <AnimatePresence>
+                            <motion.button 
+                                whileHover={{
+                                    scale: 1.2,
+                                    transition: { duration: 0.2 },
+                                }}
+                                whileTap={{ scale: 0.9}
+                                }
+                                onClick={toggleMenu} 
+                                className='btn w-10 h-10 z-50'>
+                                <FontAwesomeIcon icon={faBars} size='2xl' />
+                            </motion.button>
+                        </AnimatePresence>
+                    }
+
                 </section>
             </motion.div>
             <AnimatePresence>
                 {menuOpen && (
                     <motion.section
-                        initial="hidden"
-                        animate="visible"
-                        exit="hidden"
+                        
                         variants={menuVariants}
-                        className='absolute top-0 right-0 w-3/4 h-full bg-yellow-300'
+                        className='absolute z-30 top-0 right-0 w-3/4 h-full bg-gray-900'
                     >
                         <div className='flex flex-col space-y-10 p-10 mt-10 text-3xl'>
                             <motion.div variants={itemVariants}>
-                                <Link href={"/projects"} className='hover:underline underline-offset-2'>
+                                <Link onClick={toggleMenu} href={"/projects"} className='hover:underline underline-offset-2'>
                                     Projects
                                 </Link>
                             </motion.div>
                             <motion.div variants={itemVariants}>
-                                <Link href={"#contact"} className='hover:underline underline-offset-2'>
+                                <Link onClick={toggleMenu} href={"#contact"} className='hover:underline underline-offset-2'>
                                     Contact
                                 </Link>
                             </motion.div>
