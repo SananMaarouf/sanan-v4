@@ -19,7 +19,7 @@ export default function Landing() {
             overflow-hidden 
             rounded-2xl 
             border 
-            border-white
+            border-transparent
             bg-transparent 
             bg-opacity-5
             bg-clip-padding 
