@@ -11,9 +11,11 @@ export default function Landing() {
             transition={{ duration: 0.4 }}
             className="
             mx-auto
-            mt-4 
+            my-5 
+            
             flex 
             flex-col 
+            w-full
             overflow-hidden 
             rounded-2xl 
             border 
@@ -23,9 +25,10 @@ export default function Landing() {
             bg-clip-padding 
             backdrop-blur-sm 
             backdrop-filter 
-            md:my-5
-            md:w-1/2 
+            md:w-3/5 
+            md:py-4
             md:flex-row
+            lg:w-1/2
             "
         >
             <div className="xl:pl-12 relative my-auto flex flex-1 basis-1/2 flex-col px-4 py-6 lg:py-12 ">
@@ -53,12 +56,13 @@ export default function Landing() {
                     </div>
                 </div>
             </div>
-            <div className="flex justify-center bg-transparent md:max-w-lg lg:max-w-xl">
+            <div className="flex justify-center mx-auto max-w-72 bg-transparent md:max-w-lg lg:max-w-xl">
                 <Image
                     src={portrait}
                     width={300}
                     height={400}
                     alt="Portrait of Sanan"
+                    className='rounded-full'
                 />
             </div>
         </motion.div>
