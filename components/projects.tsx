@@ -13,8 +13,47 @@ import {
     CarouselPrevious,
 } from "@/components/ui/carousel"
 
+const projects = [
+    {
+        title: 'PartnerSOS',
+        description: 'Violence alarm / location sharing app',
+        image: '/images/projects/partnersos/logo.png',
+        url: '/projects/partnersos'
+    },
+    {
+        title: 'SanPlan',
+        description: 'Todo app',
+        image: '/images/projects/sanplan/index.png',
+        url: '/projects/sanplan'
+    },
+    {
+        title: 'Sarazamecznik.com',
+        description: 'Freelance work: portfolio page for artist client',
+        image: '/images/projects/sara/sara1.png',
+        url: '/projects/sara'
+    },
+    {
+        title: 'Insultifier',
+        description: 'Clap back quickly',
+        image: '/images/projects/insultifier/index.png',
+        url: '/projects/insultifier'
+    },
+    {
+        title: 'Greentalk',
+        description: 'Forum for environmental discussion',
+        image: '/images/projects/greentalk/greentalk.jpg',
+        url: '/projects/greentalk'
+    },
+    {
+        title: 'MovieMatch',
+        description: 'Movie night made easy',
+        image: '/images/projects/moviematch/moviematch.png',
+        url: '/projects/moviematch'
+    },
+];
 
 export default function Projects() {
+
     const [isHovered, setIsHovered] = useState(false);
 
     const slideProps = {
@@ -29,7 +68,7 @@ export default function Projects() {
             initial={{ y: 100, opacity: 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9 }}
-            className='flex flex-col justify-center md:mx-auto md:w-1/2lg:my-10'
+            className='flex flex-col justify-center md:mx-auto md:w-1/2 lg:my-10'
         >
             <div className='flex flex-row place-content-between items-center'>
                 <h2 className='text-3xl font-semibold'>

@@ -82,7 +82,7 @@ export default function Navbar() {
                             Resume
                         </motion.button>
                     </Link>
-                    <Link href={"#contact"}>
+                    <Link href={"https://github.com/SananMaarouf"} target='_blank' rel="noopener noreferrer">
                         <motion.button
                             className='hover:underline underline-offset-2'
                             whileHover={{
