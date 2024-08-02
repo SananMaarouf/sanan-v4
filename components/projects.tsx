@@ -16,40 +16,26 @@ import {
 const projects = [
     {
         title: 'PartnerSOS',
-        description: 'Violence alarm / location sharing app',
         image: '/images/projects/partnersos/logo.png',
         url: '/projects/partnersos'
     },
     {
         title: 'SanPlan',
-        description: 'Todo app',
         image: '/images/projects/sanplan/index.png',
         url: '/projects/sanplan'
     },
     {
-        title: 'Sarazamecznik.com',
-        description: 'Freelance work: portfolio page for artist client',
+        title: 'Artist portfolio',
         image: '/images/projects/sara/sara1.png',
         url: '/projects/sara'
     },
     {
         title: 'Insultifier',
-        description: 'Clap back quickly',
         image: '/images/projects/insultifier/index.png',
         url: '/projects/insultifier'
     },
-    {
-        title: 'Greentalk',
-        description: 'Forum for environmental discussion',
-        image: '/images/projects/greentalk/greentalk.jpg',
-        url: '/projects/greentalk'
-    },
-    {
-        title: 'MovieMatch',
-        description: 'Movie night made easy',
-        image: '/images/projects/moviematch/moviematch.png',
-        url: '/projects/moviematch'
-    },
+
+
 ];
 
 export default function Projects() {
@@ -68,20 +54,21 @@ export default function Projects() {
             initial={{ y: 100, opacity: 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9 }}
-            className='flex flex-col justify-center md:mx-auto md:w-1/2 lg:my-10'
+            className='flex flex-col justify-center md:mx-auto md:w-3/4 lg:my-10'
         >
+            {/* heading and nav */}
             <div className='flex flex-row place-content-between items-center'>
                 <h2 className='text-3xl font-semibold'>
                     Projects
                 </h2>
                 <motion.div
-                    onHoverStart={() => setIsHovered(true)} 
+                    onHoverStart={() => setIsHovered(true)}
                     onHoverEnd={() => setIsHovered(false)}
                     {...slideProps}
                 >
                     <Link href={'/projects'}>
                         <div className="flex flex-row rounded-md border-2 my-2 border-transparent hover:border-white">
-                            <h3 className="w-20 py-1 text-center text-2xl">See all</h3>
+                            <h3 className="w-20 py-1 text-center text-2xl underline">See all</h3>
                             <motion.div animate={{ x: isHovered ? 5 : 0 }} className='place-content-center'>
                                 <span className="mr-2 flex w-6 ">
                                     <FontAwesomeIcon icon={faArrowRight} />
@@ -91,18 +78,28 @@ export default function Projects() {
                     </Link>
                 </motion.div>
             </div>
+            {/* carousel */}
             <div className='px-14'>
                 <Carousel opts={{ align: "start" }} className=''>
                     <CarouselContent className=''>
-                        {Array.from({ length: 5 }).map((_, index) => (
-                            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                                <div className="p-1">
-                                    <Card>
-                                        <CardContent className="flex aspect-square items-center justify-center p-6">
-                                            <span className="text-3xl font-semibold">{index + 1}</span>
+                        {projects.map((project, index) => (
+                            <CarouselItem key={index} className="md:h-52 md:basis-1/2 lg:basis-1/3">
+                                <Link href={project.url}>
+                                    <Card className='bg-transparent h-full overflow-clip border border-white'>
+                                        <CardContent className="flex flex-col aspect-square items-center ">
+                                            <div className='h-2/3 md:h-4/5 overflow-clip'>
+                                                <Image
+                                                    src={project.image}
+                                                    alt={project.title}
+                                                    width={400}
+                                                    height={400}
+                                                    className='object-contain h-full'
+                                                />
+                                            </div>
+                                            <h3 className='bg-gray-800 text-2xl content-center text-center h-1/3 w-full rounded-t-md '>{project.title}</h3>
                                         </CardContent>
                                     </Card>
-                                </div>
+                                </Link>
                             </CarouselItem>
                         ))}
                     </CarouselContent>
