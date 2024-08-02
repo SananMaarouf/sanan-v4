@@ -42,7 +42,7 @@ export const Contact = () => {
       <div className="mt-1 flex flex-col justify-center md:mt-3">
         <form
           onSubmit={handleSubmit}
-          className="border-gray300 mx-auto max-w-xl rounded-2xl  border bg-gray-900 p-6 shadow-lg  "
+          className="border-gray300 mx-auto max-w-xl rounded-2xl  border-2 border-white bg-black p-6 shadow-lg  "
         >
           <label htmlFor="email" className="mb-2 block text-sm font-bold text-white">
             Email
@@ -66,7 +66,7 @@ export const Contact = () => {
           <button
             type="submit"
             disabled={state.submitting}
-            className="inline-flex w-full rounded-md bg-white px-4 py-2 font-semibold text-black hover:bg-black hover:text-white"
+            className="inline-flex w-full rounded-md border bg-white px-4 py-2 font-semibold text-black hover:bg-black hover:text-white hover:border-white"
           >
             <p className="mx-auto">Send</p>
           </button>
