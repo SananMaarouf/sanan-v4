@@ -70,7 +70,7 @@ export default function Navbar() {
                             Projects
                         </motion.button>
                     </Link>
-                    <Link href={"#contact"}>
+                    <Link href={"/resume"}>
                         <motion.button
                             className='hover:underline underline-offset-2'
                             whileHover={{
@@ -193,12 +193,12 @@ export default function Navbar() {
                                     </Link>
                                 </motion.div>
                                 <motion.div variants={itemVariants}>
-                                    <Link onClick={toggleMenu} href={"#contact"} className='hover:underline underline-offset-2'>
+                                    <Link onClick={toggleMenu} href={"/resume"} className='hover:underline underline-offset-2'>
                                         Resume
                                     </Link>
                                 </motion.div>
                                 <motion.div variants={itemVariants}>
-                                    <Link onClick={toggleMenu} href={"#contact"} className='hover:underline underline-offset-2'>
+                                    <Link onClick={toggleMenu} href={"https://github.com/SananMaarouf"} className='hover:underline underline-offset-2'>
                                         Github
                                     </Link>
                                 </motion.div>
