@@ -1,0 +1,94 @@
+{
+    "article": {
+        "relatedArticles": "Relaterte innlegg",
+        "featured": "Utvalgt",
+        "createdWith": "Laget med:"
+    },
+    "posts": {
+        "allPosts": "Alle innlegg"
+    },
+    "landingPage": {
+        "jobtitle": "Full stack-utvikler",
+        "no_articles": "Ingen innlegg å vise",
+        "latestArticles": "Prosjekter",
+        "seeAll": "Se alle",
+        "about": {
+            "title": "Om meg",
+            "subtitle": "Jeg er en 26 år gammel full stack-utvikler, jobber i Oslo, Norge. Jeg har vært interessert i datamaskiner så lenge jeg kan huske. Jeg liker veldig godt å lære nye teknologier og bruke dem til å lage praktiske løsninger."
+        }
+    },
+    "common": {
+        "regionalSettings": "Regionale innstillinger",
+        "homepage": "Hjemmeside",
+        "language": "Språk",
+        "languageDrawer": "Bytt språk"
+    },
+    "header": {
+        "about": "Om meg",
+        "posts": "Innlegg",
+        "contact": "Kontakt meg",
+        "resume": "CV"
+    },
+    "footer": {
+        "aboutUs": "Om meg",
+        "developedBy": "Utviklet av ",
+        "socials": "Sosiale medier",
+        "contact": {
+            "title": "Kontakt meg",
+            "form": {
+                "email": "Epost",
+                "message": "Melding",
+                "submit": "Send melding"
+            },
+            "success": {
+                "messageSent": "Melding sendt!",
+                "sendNew": "Tilbake"
+            }
+        }
+    },
+    "notFound": {
+        "title": "Siden ble ikke funnet",
+        "description": "Denne siden ser ut til å ikke eksistere. <0>Klikk her</0> for å gå tilbake til hjemmesiden."
+    },
+    "resume": {
+        "jobtitle": "Full stack-utvikler",
+        "location": "Oslo, Norge",
+        "summary": "utvikler",
+        "experience": {
+            "title": "Erfaring",
+            "fsd": "Systemutvikler",
+            "laft": "LAFT Software AS",
+            "laftDate": "Oktober 2021 - d.d",
+            "machinist": "Kioskmedarbeider og maskinist",
+            "nfkino": "Nordisk Film Kino AS",
+            "nfkinoDate": "Juni 2018 - August 2018"
+        },
+        "education": {
+            "title": "Utdanning",
+            "usn": "Universitetet i Sørøst-Norge",
+            "it": "IT og informasjonssystemer",
+            "bachelor": "Bachelorgrad",
+            "bachelorDate": "August 2018 - Juni 2021",
+            "vgs": "Horten Videregående skole",
+            "field": "Studiespesialisering",
+            "vgsDate": "August 2013 - Mai 2016"
+        },
+        "skills": {
+            "title": "Ferdigheter",
+            "other": "Annet"
+        },
+        "languages": {
+            "title": "Språk",
+            "norwegian": "Norsk",
+            "english": "Engelsk",
+            "kurdish": "Kurdisk",
+            "turkish": "Tyrkisk",
+            "german": "Tysk"
+        },
+        "footer": {
+            "title": "Liker du hva du ser?",
+            "prompt": "Last ned min CV",
+            "download": "Last ned"
+        }
+    }
+}
