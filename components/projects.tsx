@@ -34,8 +34,6 @@ const projects = [
         image: '/images/projects/insultifier/index.png',
         url: '/projects/insultifier'
     },
-
-
 ];
 
 export default function Projects() {

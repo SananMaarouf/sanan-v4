@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Greentalk() {
     return (
-        <section>
+        <section className="px-5 md:px-0">
             {/* heading and image gallery */}
             <motion.div
                 initial={{ y: 100, opacity: 0 }}
@@ -18,36 +18,35 @@ export default function Greentalk() {
                 flex-col 
                 border-white
                 w-full
+                h-1/2
                 overflow-hidden 
                 rounded-2xl 
                 border 
                 border-transparent
                 bg-transparent 
                 md:w-3/5 
-                md:py-4
-                md:flex-row
                 lg:w-1/2
                 "
             >
-                <div className="xl:pl-12 relative my-auto flex flex-1 basis-1/2 flex-col px-4 py-6 lg:py-12 ">
-                    <div className='flex flex-row mx-auto md:mx-0 md:flex-col'>
-                        <h1 className="text-3xl md:text-4xl lg:text-5xl">
-                           Greentalk 
-                        </h1>
-                    </div>
-                    <div className="flex grow flex-col justify-between">
-                        <div className='flex flex-row md:flex-col w-full place-content-between'>
-                            <p className="mt-2 text-sm md:mt-4 md:text-lg lg:text-xl">
-                                If you love our planet, you will love Greentalk
-                            </p>
-                            <p className="mt-2 text-sm md:mt-4 md:text-lg lg:text-xl">
-                               January 14, 2024
-                            </p>
-                        </div>
-                    </div>
+                <div className="w-full justify-center flex flex-col px-4 pb-2">
+                    <h1 className="text-3xl md:text-4xl lg:text-5xl">
+                        Greentalk
+                    </h1>
+                    <p className="mt-2 text-md md:mt-4 md:text-lg lg:text-xl">
+                        If you love our planet, you will love Greentalk
+                    </p>
+                    <p className="mt-2 text-sm md:mt-4 md:text-lg lg:text-xl">
+                        March 18, 2021
+                    </p>
                 </div>
-                <div className="flex justify-center mx-auto max-w-72 bg-transparent md:max-w-lg lg:max-w-xl">
-                </div>
+
+                <Image
+                    src={"/images/projects/greentalk/greentalk.jpg"}
+                    alt={"spongebob"}
+                    width={1000}
+                    height={800}
+                    className="w-full "
+                />
             </motion.div>
             {/* content, story about the app */}
             <section className="mx-auto my-5 md:my-10 md:w-3/5 lg:w-1/2">
