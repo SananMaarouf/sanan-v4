@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import React, { useState } from 'react';
+import { GetStaticProps } from 'next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes, faHome } from '@fortawesome/free-solid-svg-icons';
@@ -215,3 +216,9 @@ export default function Navbar() {
         </nav>
     );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+    return {
+        props: {},
+    };
+};

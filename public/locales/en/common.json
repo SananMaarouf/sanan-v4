@@ -1,8 +1,8 @@
 {
     "article": {
-      "relatedArticles": "Related works",
-      "featured": "featured",
-      "createdWith": "Created with:"
+        "relatedArticles": "Related works",
+        "featured": "featured",
+        "createdWith": "Created with:"
     },
     "posts": {
       "allPosts": "All works"
@@ -14,7 +14,7 @@
       "seeAll": "See all",
       "about": {
         "title": "About me",
-        "subtitle": "I am a 26 year old full stack developer, working in Oslo, Norway. I've been interested in computers for as long as I can remember. I really enjoy learning new technologies and use them to create practical solutions."
+        "subtitle": "I am a 27 year old full stack developer, working in Oslo, Norway. I've been interested in computers for as long as I can remember. I really enjoy learning new technologies and use them to create practical solutions."
       }
     },
     "common": {
