@@ -49,28 +49,33 @@ export default function Greentalk() {
                 />
             </motion.div>
             {/* content, story about the app */}
-            <section className="mx-auto my-5 md:my-10 md:w-3/5 lg:w-1/2">
-                <p>
-                In our second year of university, we were tasked with creating a CRUD application for our semester assignment. 
-                After some time debating what kind of site and what it should be about, we landed on a forum for environmentalists 
-                since global warming, climate change, and pollution are becoming bigger problems, 
-                we wanted to create a space where like minded people could communicate and start events to meet up.
-                </p>
-            </section>
-            <section className="mx-auto my-5 md:my-10 md:w-3/5 lg:w-1/2">
-                <p>
-                My group that consisted of:
-                </p>
-                <ul>
-                    <li>Me</li>
-                    <li>Stian Flatset</li>
-                    <li>Sigve Eilertsen</li>
-                    <li>Erlend Hollund</li>
-                    <li>Hanna Singueo</li>
-                    <li>Mikkel Mohaugen</li>
-                </ul>
-            </section>
-            
+            <motion.div
+                initial={{ y: 100, opacity: 0 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4 }}
+            >
+                <section className="mx-auto my-5 md:my-10 md:w-3/5 lg:w-1/2">
+                    <p>
+                        In our second year of university, we were tasked with creating a CRUD application for our semester assignment.
+                        After some time debating what kind of site and what it should be about, we landed on a forum for environmentalists
+                        since global warming, climate change, and pollution are becoming bigger problems,
+                        we wanted to create a space where like minded people could communicate and start events to meet up.
+                    </p>
+                </section>
+                <section className="mx-auto my-5 md:my-10 md:w-3/5 lg:w-1/2">
+                    <p>
+                        My group that consisted of:
+                    </p>
+                    <ul>
+                        <li>Me</li>
+                        <li>Stian Flatset</li>
+                        <li>Sigve Eilertsen</li>
+                        <li>Erlend Hollund</li>
+                        <li>Hanna Singueo</li>
+                        <li>Mikkel Mohaugen</li>
+                    </ul>
+                </section>
+            </motion.div>
         </section>
     );
 }

@@ -15,7 +15,7 @@ const images = [
         title: 'Screenshot of the app',
         image: '/images/projects/sanplan/index.png',
     },
-    
+
 ];
 export default function Sanplan() {
     return (
@@ -64,30 +64,33 @@ export default function Sanplan() {
                 </div>
             </motion.div>
             {/* content, story about the app */}
-            <section className="mx-auto my-5 md:my-10 md:w-3/5 lg:w-1/2">
-                <p>
-                This is my todo app made with React Native, Expo Go and Expo Router.
-                </p>
-            </section>
-            <section className="mx-auto my-5 md:my-10 md:w-3/5 lg:w-1/2">
-                <p>
-                It is my starting point for creating universal mobile apps using JSX, 
-                a syntax extension for JavaScript that allows developers to write 
-                HTML-like code inside a JavaScript file.
-                </p>
-            </section>
-            <section className="mx-auto my-5 md:my-10 md:w-3/5 lg:w-1/2">
-                <p>
-                In the beginning, my goal with this app is to create a 
-                functional and nice looking todo app that runs on Android/iOS. 
-                </p>
-            </section>
-            <section className="mx-auto my-5 md:my-10 md:w-3/5 lg:w-1/2">
-                If you are interested in the code, you can find it on my GitHub page.
-            </section>
-            <motion.section>
-
-            </motion.section>
+            <motion.div
+                initial={{ y: 100, opacity: 0 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4 }}
+            >
+                <section className="mx-auto my-5 md:my-10 md:w-3/5 lg:w-1/2">
+                    <p>
+                        This is my todo app made with React Native, Expo Go and Expo Router.
+                    </p>
+                </section>
+                <section className="mx-auto my-5 md:my-10 md:w-3/5 lg:w-1/2">
+                    <p>
+                        It is my starting point for creating universal mobile apps using JSX,
+                        a syntax extension for JavaScript that allows developers to write
+                        HTML-like code inside a JavaScript file.
+                    </p>
+                </section>
+                <section className="mx-auto my-5 md:my-10 md:w-3/5 lg:w-1/2">
+                    <p>
+                        In the beginning, my goal with this app is to create a
+                        functional and nice looking todo app that runs on Android/iOS.
+                    </p>
+                </section>
+                <section className="mx-auto my-5 md:my-10 md:w-3/5 lg:w-1/2">
+                    If you are interested in the code, you can find it on my GitHub page.
+                </section>
+            </motion.div>
         </section>
     );
 }
