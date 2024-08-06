@@ -4,14 +4,21 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes, faHome } from '@fortawesome/free-solid-svg-icons';
 import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
 
 export default function Navbar() {
-    const { t } = useTranslation();
-
+    const { t, i18n } = useTranslation();
+    const router = useRouter();
     const [menuOpen, setMenuOpen] = useState(false);
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
+    };
+
+    const switchLanguage = () => {
+        const newLang = i18n.language === 'en' ? 'nb' : 'en';
+        i18n.changeLanguage(newLang);
+        router.push(router.pathname, router.asPath, { locale: newLang });
     };
 
     const menuVariants = {
@@ -109,6 +116,18 @@ export default function Navbar() {
                             {t('nav.contact')}
                         </motion.button>
                     </Link>
+                    {/* Language Switcher */}
+                    <motion.button
+                        className='hover:underline underline-offset-2'
+                        whileHover={{
+                            scale: 1.2,
+                            transition: { duration: 0.2 },
+                        }}
+                        whileTap={{ scale: 1.2, transition: { duration: 0.2 } }}
+                        onClick={switchLanguage}
+                    >
+                        {i18n.language === 'en' ? 'Norsk' : 'English'}
+                    </motion.button>
                 </section>
             </motion.div>
             <motion.div
@@ -208,6 +227,12 @@ export default function Navbar() {
                                     <Link onClick={toggleMenu} href={"#contact"} className='hover:underline underline-offset-2'>
                                     {t('nav.contact')}
                                     </Link>
+                                </motion.div>
+                                {/* Language Switcher */}
+                                <motion.div variants={itemVariants}>
+                                    <button onClick={switchLanguage} className='hover:underline underline-offset-2'>
+                                        {i18n.language === 'en' ? 'Norsk' : 'English'}
+                                    </button>
                                 </motion.div>
                             </section>
                         </motion.section>
