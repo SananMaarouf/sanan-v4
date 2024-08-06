@@ -114,7 +114,27 @@
 		"story":"It is my starting point for creating universal mobile apps using JSX, a syntax extension for JavaScript that allows developers to write HTML-like code inside a JavaScript file. %{br} In the beginning, my goal with this app is to create a functional and nice looking todo app that runs on Android/iOS.",
 		"github": "If you are interested in the code you can find it on "
 	},
+	"sara": {
+		"description": "Portfolio page for artist, Sara Zamecznik",
+		"date": "February 27th, 2024",
+		"intro": "This was an exiting project to do.",
+		"intro2": "My client, Sara Zamecznik, is an art student at KHIO in Oslo. She is a skilled artist who creates art in various mediums, specializing in ceramics.",
+		"intro3": "Upon learning that she would soon graduate and had been showcasing her art exclusively on Instagram, I recognized the need for a more professional platform—an exclusive website.",
+		"intro4": "I reached out to Sara and presented an offer she couldn't refuse. I had the freedom to use any technologies I preferred, with her only requirement being a design that is minimal, mobile-friendly, and cost-effective to host.",
+		"criteria": "With these criteria in mind, I set out to find a suitable tech stack. I instantly thought of using a CMS such as Wordpress or Squarespace for their ease of use and are easy to maintain. While CMS-platforms like WordPress or Squarespace are popular for their user friendlyness, they come at a literal cost. Luckily there are more cost effective alternatives. Given the nature of the site, all off the content could be static and only need to be updated when she makes a new post. Here is where static site generators(SSG) and headless-CMS systems come in. By utilizing SSGs, such as Next.js, to fetch content from the headless CMS, in this case, Contentful, I could generate a static webpage. This approach is ideal for achieving a custom UI design and allows for easy hosting on Vercel, free of charge. It also enables non-coders to create content through a user-friendly CMS interface, triggering automatic webpage rebuilding via webhooks.",
+		"choice": "This choice comes with a drawback—changing the UI in the future would either require coding knowledge or hiring my services again. After discussing the pros and cons, Sara and I agreed on the headless CMS approach.",
+		"research": "After doing some research the tech stack ended up being:",
+		"techStack": {
+			"nextjs": "as the JS framework",
+			"tailwind": "for styling",
+			"contentful": "as the headless CMS",
+			"graphql": "for fetching data",
+			"formspree": "for the contact form",
+			"vercel": "for hosting"
+		},
+		"nextJsExperience": "Developing with Next.js was enjoyable, thanks to its built-in tools like image optimization and routing. Hosting on Vercel, which is tailored for Next.js, was seamless. Tailwind CSS facilitated rapid UI development, making responsive components easy to create.",
+		"contentfulExperience": "Contentful proved to be user-friendly, allowing for straightforward content model creation, post generation, and asset uploads."
+	},
 	"insultifier": {},
-	"moviematch": {},
-	"sara": {}
+	"moviematch": {}
 }
