@@ -135,6 +135,17 @@
 		"nextJsExperience": "Å utvikle med Next.js var hyggelig, takket være innebygde verktøy som bildeoptimalisering og ruting. Hosting på Vercel, som er skreddersydd for Next.js, var sømløst. Tailwind CSS muliggjorde rask UI-utvikling, noe som gjorde det enkelt å lage responsive komponenter.",
 		"contentfulExperience": "Contentful viste seg å være brukervennlig, og tillot enkel opprettelse av innholdsmodeller, generering av innlegg og opplasting av ressurser."
 	},
-	"insultifier": {},
-	"moviematch": {}
+		"insultifier": {
+		"description": "Svar raskt tilbake",
+		"date": "6. mai 2024",
+		"intro": "Er du umoden? eller veldig sarkastisk? Da er insult.sanan.no det perfekte verktøyet for deg!",
+		"intro2": "Insultifier er et verktøy jeg laget for raskt å kunne svare tilbake til vennene mine når de sier noe dumt i gruppesamtalen, men det fungerer også bra i et bedriftsmiljø... tror jeg.",
+		"howItWorks": "Du skriver inn en setning som for eksempel \"neeeei sanan, du kan ikke bare slette databasen fordi du prøvde å frigjøre plass\". og det returnerer \"nEeEeI sAnAn, dU kAn IkKe BaRe SlEtTe DaTaBaSeN fOrDi Du PrØvDe Å fRiGjØrE pLaSs\""
+	},
+		"moviematch": {
+		"description": "Krangler du og partneren din stadig om hvilke filmer dere skal se? Movie Match kan være løsningen på problemene deres",
+		"date": "18. mars 2021",
+		"story": "I vårt andre år på universitetet fikk vi i oppgave å lage en praktisk Android-app til semesteroppgaven vår. Gruppen min brukte litt tid på å snakke om våre prøvelser og utfordringer, og hvordan en app kunne løse dem. Det viser seg at terapi er løsningen på de fleste av dem, men det som kunne løses var problemet med å finne en film som alle liker på filmkvelder, og dermed ble ideen født.",
+		"group": "Gruppen min besto av: "
+	}
 }

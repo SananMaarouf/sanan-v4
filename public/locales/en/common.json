@@ -135,6 +135,17 @@
 		"nextJsExperience": "Developing with Next.js was enjoyable, thanks to its built-in tools like image optimization and routing. Hosting on Vercel, which is tailored for Next.js, was seamless. Tailwind CSS facilitated rapid UI development, making responsive components easy to create.",
 		"contentfulExperience": "Contentful proved to be user-friendly, allowing for straightforward content model creation, post generation, and asset uploads."
 	},
-	"insultifier": {},
-	"moviematch": {}
+	"insultifier": {
+		"description": "Clap back quicly",
+		"date": "May, 6th 2024",
+		"intro": "Are you immature? or very sarcastic? Then insult.sanan.no is the perfect tool for you!",
+		"intro2": "The insultifier is a tool i made to quickly clap back at my friends when they say something stupid in the group chat, but it works great in a corporate environment....i think.",
+		"howItWorks": "You write in a sentence such as \"noooo sanan, you cannot just drop the database because you were trying to free up space\". and it returns \"nOoOo sAnAn, YoU CaNnOt jUsT DrOp tHe dAtAbAsE BeCaUsE YoU WeRe tRyInG To fReE Up sPaCe\""
+	},
+	"moviematch": {
+		"description":"Do you and your partner constantly argue about what movies to watch? Movie Match could be the solution to your troubles",
+		"date": "March 18th, 2021",
+		"story":"In our second year of university, we were tasked with creating a practical Android app for our semester assignment. My group spent some time talking about our trials and tribulations and how an app could solve them. Turns out that therapy is the solution to most of them, but what could be solved was the issue of finding a movie that everybody likes on movie nights and thus the idea was born.",
+		"group": "My group consisted of: "
+	}
 }

@@ -12,10 +12,10 @@ export async function getStaticProps({ locale }: { locale: string }) {
     },
   }
 }
-const { t } = useTranslation();
 
 
 export default function MovieMatch() {
+    const { t } = useTranslation();
     return (
         <section className="px-5 md:px-0">
             {/* heading and image gallery */}
@@ -45,10 +45,10 @@ export default function MovieMatch() {
                         MovieMatch
                     </h1>
                     <p className="mt-2 text-md md:mt-4 md:text-lg lg:text-xl">
-                        Do you and your partner constantly argue about what movies to watch? Movie Match could be the solution to your troubles
+                        {t("moviematch.description")}
                     </p>
                     <p className="mt-2 text-sm md:mt-4 md:text-lg lg:text-xl">
-                        March 18th, 2021
+                        {t("moviematch.date")}
                     </p>
                 </div>
 
@@ -69,16 +69,12 @@ export default function MovieMatch() {
             >
                 <section className="mx-auto my-5 md:my-10 md:w-3/5 lg:w-1/2">
                     <p>
-                        In our second year of university, we were tasked with creating a practical Android app
-                        for our semester assignment.
-                        My group spent some time talking about our trials and tribulations and how an app could solve them.
-                        Turns out that therapy is the solution to most of them, but what could be solved was the issue of
-                        finding a movie that everybody likes on movie nights and thus the idea was born.
+                        {t("moviematch.story")}
                     </p>
                 </section>
                 <section className="mx-auto my-5 md:my-10 md:w-3/5 lg:w-1/2">
                     <p>
-                        The group consisted of:
+                        {t("moviematch.group")}
                     </p>
                     <ul>
                         <li>Me</li>
