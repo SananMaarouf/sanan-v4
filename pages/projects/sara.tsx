@@ -11,7 +11,6 @@ export async function getStaticProps({ locale }: { locale: string }) {
     },
   }
 }
-const { t } = useTranslation();
 
 
 const images = [
@@ -22,6 +21,7 @@ const images = [
 ];
 
 export default function Sara() {
+    const { t } = useTranslation();
     return (
         <section className="px-5 md:px-0">
             {/* heading and image gallery */}

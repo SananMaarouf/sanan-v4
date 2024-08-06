@@ -45,10 +45,10 @@ export default function Greentalk() {
                         Greentalk
                     </h1>
                     <p className="mt-2 text-md md:mt-4 md:text-lg lg:text-xl">
-                        If you love our planet, you will love Greentalk
+                        {t('greentalk.description')}
                     </p>
                     <p className="mt-2 text-sm md:mt-4 md:text-lg lg:text-xl">
-                        March 18, 2021
+                        {t('greentalk.date')}
                     </p>
                 </div>
 
@@ -68,15 +68,12 @@ export default function Greentalk() {
             >
                 <section className="mx-auto my-5 md:my-10 md:w-3/5 lg:w-1/2">
                     <p>
-                        In our second year of university, we were tasked with creating a CRUD application for our semester assignment.
-                        After some time debating what kind of site and what it should be about, we landed on a forum for environmentalists
-                        since global warming, climate change, and pollution are becoming bigger problems,
-                        we wanted to create a space where like minded people could communicate and start events to meet up.
+                        {t('greentalk.intro')}
                     </p>
                 </section>
                 <section className="mx-auto my-5 md:my-10 md:w-3/5 lg:w-1/2">
                     <p>
-                        My group that consisted of:
+                        {t('greentalk.group')}
                     </p>
                     <ul>
                         <li>Me</li>

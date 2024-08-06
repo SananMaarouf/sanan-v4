@@ -101,8 +101,19 @@
 		"experienceHeader": "Erfaring",
 		"experience": "Å utvikle PartnerSOS var en givende oppgave, spesielt siden min bakgrunn hovedsakelig er innen webutvikling. Å bruke React Native tillot meg å bruke mine webutviklingsferdigheter (JSX, TSX) til å lage en mobilapp. Uavhengig av populariteten ga dette prosjektet uvurderlig erfaring innen mobilapputvikling."
 	},
-	"greentalk": {},
-	"sanplan": {},
+	"greentalk": {
+		"description": "Om du elsker planeten, vil du elske GreenTalk",
+		"date": "18 Mars, 2021",
+		"intro": "I vårt andre år på universitetet fikk vi i oppgave å lage en CRUD-applikasjon for semesteroppgaven vår. Etter en stund med diskusjon om hva slags nettsted og hva det skulle handle om, landet vi på et forum for miljøvernere. Siden global oppvarming, klimaendringer og forurensning blir større problemer, ønsket vi å lage et sted hvor likesinnede kunne kommunisere og starte arrangementer for å møtes.",
+  		"group": "Gruppen min besto av: "
+	},
+	"sanplan": {
+		"description": "Enkel todo-app laget med Expo Go",
+		"date": "5. mars 2024",
+		"intro": "Dette er min todo-app laget med React Native, Expo Go og Expo Router.",
+		"story": "Det er mitt utgangspunkt for å lage universelle mobilapper ved hjelp av JSX, en syntaksutvidelse for JavaScript som lar utviklere skrive HTML-lignende kode inne i en JavaScript-fil. I begynnelsen er målet mitt med denne appen å lage en funksjonell og pen todo-app som kjører på Android/iOS.",
+		"github": "Om du er interessert i koden så kan du finne den på "
+	},
 	"insultifier": {},
 	"moviematch": {},
 	"sara": {}
