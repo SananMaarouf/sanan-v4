@@ -51,7 +51,7 @@ export default function Sanplan() {
                 relative
                 "
             >
-                <div className="absolute justify-end h-2/6 w-full flex flex-col px-4 py-6 z-10 bg-opacity-95 bg-black">
+                <div className="absolute md:relative md:my-auto justify-end h-2/6 w-full flex flex-col px-4 py-6 z-10 bg-opacity-95 bg-black">
                     <h1 className="text-3xl md:text-4xl lg:text-5xl text-white">
                         SanPlan
                     </h1>
@@ -68,7 +68,7 @@ export default function Sanplan() {
                         alt={images[0].title}
                         width={600}
                         height={800}
-                        className="w-full h-full object-cover"
+                        className="w-full"
                     />
                 </div>
             </motion.div>
