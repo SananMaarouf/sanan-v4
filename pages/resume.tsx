@@ -3,16 +3,18 @@ import { faDownload } from '@fortawesome/free-solid-svg-icons';
 import NextImage from 'next/image';
 import { useTheme } from 'next-themes';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next'
 
 export async function getStaticProps({ locale }: { locale: string }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['common'])),
+      ...(await serverSideTranslations(locale)),
     },
   }
 }
 
 export default function Resume() {
+  const { t } = useTranslation();
   const { systemTheme, theme, setTheme } = useTheme();
   const iconColor = theme === 'system' ? systemTheme : theme;
 
@@ -77,9 +79,13 @@ export default function Resume() {
             </section>
 
             <h2>Sanan Maarouf</h2>
-            <p>System developer</p>
+            <p>
+              {t('resume.jobtitle')}
+            </p>
             <p>+47 47264992</p>
-            <p>Oslo, Norway</p>
+            <p>
+            {t('resume.location')}
+            </p>
             <a
               className="
               mt-10
@@ -113,7 +119,7 @@ export default function Resume() {
         <hr className="mx-auto my-4 h-1 w-full rounded border-0 bg-gray-700"></hr>
       </section>
       <section>
-        <h2>Experience</h2>
+        <h2>{t('resume.experience.title')}</h2>
         <section className="flex flex-row">
           {/* the timeline line */}
           <section className="my-auto flex ">
@@ -124,17 +130,17 @@ export default function Resume() {
             <div className="flex items-center pt-3">
               <div className="-ml-[0.33rem] mr-3 h-[7px] w-[7px] rounded-full bg-gray-500" />
               <div className="flex flex-col">
-                <h3 className="font-bold">System Developer</h3>
+                <h3 className="font-bold">{t('resume.experience.fsd')}</h3>
                 <h3 className="font-semibold">LAFT Software AS</h3>
-                <p className="mb-3">October 2021 - March 2024</p>
+                <p className="mb-3">{t('resume.experience.laftDate')}</p>
               </div>
             </div>
             <div className="flex items-center pt-3">
               <div className="-ml-[0.33rem] mr-3 h-[7px] w-[7px] rounded-full bg-gray-500" />
               <div className="flex flex-col">
-                <h3 className="font-bold">Cinema machinist</h3>
+                <h3 className="font-bold">{t('resume.experience.machinist')}</h3>
                 <h3 className="font-semibold">Nordisk Film Kino AS</h3>
-                <p className="mb-3">June 2018 - August 2018</p>
+                <p className="mb-3">{t('resume.experience.nfkinoDate')}</p>
               </div>
             </div>
           </section>
@@ -143,7 +149,7 @@ export default function Resume() {
         <hr className="mx-auto my-4 h-1 w-full rounded border-0 bg-gray-700"></hr>
       </section>
       <section>
-        <h2>Education:</h2>
+        <h2>{t('resume.education.title')}</h2>
         {/* Add your education details here */}
         <section className="flex flex-row">
           {/* the timeline line */}
@@ -155,18 +161,20 @@ export default function Resume() {
             <div className="flex items-center pt-3">
               <div className="-ml-[0.33rem] mr-3 h-[7px] w-[7px] rounded-full bg-gray-500" />
               <div className="flex flex-col">
-                <h3 className="font-bold">University of South-Eastern Norway</h3>
-                <h3 className="font-semibold">IT and Information Systems</h3>
-                <h3 className="font-semibold">Bachelor's degree</h3>
-                <p className="mb-3">August 2018 - June 2021</p>
+                <h3 className="font-bold">
+                {t('resume.education.usn')}
+                </h3>
+                <h3 className="font-semibold">{t('resume.education.it')}</h3>
+                <h3 className="font-semibold">{t('resume.education.bachelor')}</h3>
+                <p className="mb-3">{t('resume.education.bachelorDate')}</p>
               </div>
             </div>
             <div className="flex items-center pt-3">
               <div className="-ml-[0.33rem] mr-3 h-[7px] w-[7px] rounded-full bg-gray-500" />
               <div className="flex flex-col">
-                <h3 className="font-bold">Horten High School</h3>
-                <h3 className="font-semibold">General Studies</h3>
-                <p className="mb-3">August 2013 - May 2016</p>
+                <h3 className="font-bold">{t('resume.education.vgs')}</h3>
+                <h3 className="font-semibold">{t('resume.education.field')}</h3>
+                <p className="mb-3">{t('resume.education.vgsDate')}</p>
               </div>
             </div>
           </section>
@@ -175,7 +183,7 @@ export default function Resume() {
         <hr className="mx-auto my-4 h-1 w-full rounded border-0 bg-gray-700"></hr>
       </section>
       <section>
-        <h2>Skills</h2>
+        <h2>{t('resume.skills.title')}</h2>
         {/* Add your skills here */}
         <section className="flex flex-row">
           <section className="flex flex-col">
@@ -224,7 +232,7 @@ export default function Resume() {
             </div>
             <div className="flex items-center pt-3">
               <div className="flex flex-col">
-                <h3 className="font-bold">Other</h3>
+                <h3 className="font-bold">{t('resume.skills.other')}</h3>
                 <div className="flex flex-row flex-wrap">
                   {other.map((item, index) => (
                     <p
@@ -243,7 +251,7 @@ export default function Resume() {
         <hr className="mx-auto my-4 h-1 w-full rounded border-0 bg-gray-700"></hr>
       </section>
       <section>
-        <h2>Languages</h2>
+        <h2>{t('resume.languages.title')}</h2>
         <section className="flex flex-row">
           <section className="flex flex-col">
             <div className="items-center pt-1">
@@ -251,27 +259,27 @@ export default function Resume() {
                 <p
                   className={`ml-2 mt-1 flex rounded-md bg-gray-50 px-3 py-1 text-lg text-gray-600 ring-1 ring-inset ring-gray-500/10`}
                 >
-                  Norwegian
+                  {t('resume.languages.norwegian')}
                 </p>
                 <p
                   className={`ml-2 mt-1 flex rounded-md bg-gray-50 px-3 py-1 text-lg text-gray-600 ring-1 ring-inset ring-gray-500/10`}
                 >
-                  English
+                  {t('resume.languages.english')}
                 </p>
                 <p
                   className={`ml-2 mt-1 flex rounded-md bg-gray-50 px-3 py-1 text-lg text-gray-600 ring-1 ring-inset ring-gray-500/10`}
                 >
-                  German
+                  {t('resume.languages.german')}
                 </p>
                 <p
                   className={`ml-2 mt-1 flex rounded-md bg-gray-50 px-3 py-1 text-lg text-gray-600 ring-1 ring-inset ring-gray-500/10`}
                 >
-                  Kurdish
+                  {t('resume.languages.kurdish')}
                 </p>
                 <p
                   className={`ml-2 mt-1 flex rounded-md bg-gray-50 px-3 py-1 text-lg text-gray-600 ring-1 ring-inset ring-gray-500/10`}
                 >
-                  Turkish
+                  {t('resume.languages.turkish')}
                 </p>
               </div>
             </div>

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Card, CardContent } from "@/components/ui/card"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { useTranslation } from 'next-i18next';
 import {
     Carousel,
     CarouselContent,
@@ -37,7 +38,7 @@ const projects = [
 ];
 
 export default function Projects() {
-
+    const { t } = useTranslation();
     const [isHovered, setIsHovered] = useState(false);
 
     const slideProps = {
@@ -57,7 +58,7 @@ export default function Projects() {
             {/* heading and nav */}
             <div className='flex flex-row place-content-between items-center'>
                 <h2 className='text-3xl font-semibold'>
-                    Projects
+                    {t('projects.title')}
                 </h2>
                 <motion.div
                     onHoverStart={() => setIsHovered(true)}
@@ -66,7 +67,7 @@ export default function Projects() {
                 >
                     <Link href={'/projects'}>
                         <div className="flex flex-row rounded-md border-2 my-2 border-transparent hover:border-white">
-                            <h3 className="w-20 py-1 text-center text-2xl underline">See all</h3>
+                            <h3 className="w-20 py-1 text-center text-2xl underline"> {t('projects.seeAll')} </h3>
                             <motion.div animate={{ x: isHovered ? 5 : 0 }} className='place-content-center'>
                                 <span className="mr-2 flex w-6 ">
                                     <FontAwesomeIcon icon={faArrowRight} />

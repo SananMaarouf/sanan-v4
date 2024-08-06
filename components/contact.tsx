@@ -1,14 +1,15 @@
 import { useForm, ValidationError } from '@formspree/react';
+import { useTranslation } from 'next-i18next';
+
 
 export const Contact = () => {
-
-
+  const { t } = useTranslation();
   const [state, handleSubmit, resetForm] = useForm('mqkvqyvz');
 
   if (state.succeeded) {
     return (
       <div className="mt-3 text-center md:mt-0">
-        <h2 className="text-3xl text-center">Contact me</h2>
+        <h2 className="text-3xl text-center">{t('footer.contact.title')}</h2>
         <div
           className="
           mx-auto 
@@ -23,12 +24,12 @@ export const Contact = () => {
           md:border-gray-100 
           "
         >
-          <h2>Message sent</h2>
+          <h2>{t('footer.contact.success.messageSent')}</h2>
           <button
             onClick={resetForm}
             className="mt-4 rounded px-4 py-2 font-bold border text-white hover:bg-gray-800 hover:border-black"
           >
-            Send another
+            {t('footer.contact.success.sendNew')}
           </button>
         </div>
       </div>
@@ -38,14 +39,14 @@ export const Contact = () => {
   return (
     /* add flex-row when you want to implement a sitemap or another column  */
     <div className="mt-3 md:mt-0">
-      <h2 className="text-center text-3xl font-semibold">Contact me</h2>
+      <h2 className="text-center text-3xl font-semibold">{t('footer.contact.title')}</h2>
       <div className="mt-1 flex flex-col justify-center md:mt-3">
         <form
           onSubmit={handleSubmit}
           className="border-gray300 mx-auto max-w-xl rounded-2xl  border-2 border-white p-6 shadow-lg  "
         >
           <label htmlFor="email" className="mb-2 block text-sm font-bold text-white">
-            Email
+          {t('footer.contact.form.email')}
           </label>
           <input
             id="email"
@@ -55,7 +56,7 @@ export const Contact = () => {
           />
           <ValidationError prefix="Email" field="email" errors={state.errors} />
           <label htmlFor="message" className="mb-2 block text-sm font-bold text-white">
-            Message
+          {t('footer.contact.form.message')}
           </label>
           <textarea
             id="message"
@@ -68,7 +69,9 @@ export const Contact = () => {
             disabled={state.submitting}
             className="inline-flex w-full rounded-md border bg-white px-4 py-2 font-semibold text-black hover:bg-transparent hover:text-white hover:border-white"
           >
-            <p className="mx-auto">Send</p>
+            <p className="mx-auto">
+              {t('footer.contact.form.submit')}
+            </p>
           </button>
           <ValidationError errors={state.errors} />
         </form>

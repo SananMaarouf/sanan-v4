@@ -1,6 +1,18 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next'
+
+export async function getStaticProps({ locale }: { locale: string }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale)),
+    },
+  }
+}
+const { t } = useTranslation();
+
 
 const images = [
     {

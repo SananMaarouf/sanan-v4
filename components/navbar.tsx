@@ -1,11 +1,13 @@
 import Link from 'next/link';
 import React, { useState } from 'react';
-import { GetStaticProps } from 'next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes, faHome } from '@fortawesome/free-solid-svg-icons';
+import { useTranslation } from 'next-i18next';
 
 export default function Navbar() {
+    const { t } = useTranslation();
+
     const [menuOpen, setMenuOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -68,7 +70,7 @@ export default function Navbar() {
                             }}
                             whileTap={{ scale: 1.2, transition: { duration: 0.2 } }}
                         >
-                            Projects
+                            {t('nav.projects')}
                         </motion.button>
                     </Link>
                     <Link href={"/resume"}>
@@ -80,7 +82,7 @@ export default function Navbar() {
                             }}
                             whileTap={{ scale: 1.2, transition: { duration: 0.2 } }}
                         >
-                            Resume
+                            {t('nav.resume')}
                         </motion.button>
                     </Link>
                     <Link href={"https://github.com/SananMaarouf"} target='_blank' rel="noopener noreferrer">
@@ -104,7 +106,7 @@ export default function Navbar() {
                             }}
                             whileTap={{ scale: 1.2, transition: { duration: 0.2 } }}
                         >
-                            Contact
+                            {t('nav.contact')}
                         </motion.button>
                     </Link>
                 </section>
@@ -156,7 +158,6 @@ export default function Navbar() {
                                 key={"open"} 
                                 exit={{ opacity: 0, }}
                                 transition={{ duration: 0.3 }}
-
                                 whileHover={{
                                     scale: 1.2,
                                     transition: { duration: 0.1 },
@@ -190,12 +191,12 @@ export default function Navbar() {
                             <section className='flex flex-col space-y-10 p-10 mt-10 text-3xl'>
                                 <motion.div variants={itemVariants}>
                                     <Link onClick={toggleMenu} href={"/projects"} className='hover:underline underline-offset-2'>
-                                        Projects
+                                    {t('nav.projects')}
                                     </Link>
                                 </motion.div>
                                 <motion.div variants={itemVariants}>
                                     <Link onClick={toggleMenu} href={"/resume"} className='hover:underline underline-offset-2'>
-                                        Resume
+                                    {t('nav.resume')}
                                     </Link>
                                 </motion.div>
                                 <motion.div variants={itemVariants}>
@@ -205,7 +206,7 @@ export default function Navbar() {
                                 </motion.div>
                                 <motion.div variants={itemVariants}>
                                     <Link onClick={toggleMenu} href={"#contact"} className='hover:underline underline-offset-2'>
-                                        Contact
+                                    {t('nav.contact')}
                                     </Link>
                                 </motion.div>
                             </section>
@@ -216,9 +217,3 @@ export default function Navbar() {
         </nav>
     );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-    return {
-        props: {},
-    };
-};

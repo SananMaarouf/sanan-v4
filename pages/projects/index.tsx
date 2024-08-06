@@ -2,6 +2,16 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next'
+
+export async function getStaticProps({ locale }: { locale: string }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale)),
+    },
+  }
+}
 
 const projects = [
     {
@@ -58,6 +68,8 @@ const itemVariants = {
 };
 
 export default function Projects() {
+    const { t } = useTranslation();
+
     return (
         <section className='bg-black'>
             {/* projects grid */}
