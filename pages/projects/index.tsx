@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next'
+import { t } from 'i18next';
 
 export async function getStaticProps({ locale }: { locale: string }) {
   return {
@@ -13,44 +14,7 @@ export async function getStaticProps({ locale }: { locale: string }) {
   }
 }
 
-const projects = [
-    {
-        title: 'PartnerSOS',
-        description: 'Violence alarm / location sharing app',
-        image: '/images/projects/partnersos/logo.png',
-        url: '/projects/partnersos'
-    },
-    {
-        title: 'SanPlan',
-        description: 'Todo app',
-        image: '/images/projects/sanplan/index.png',
-        url: '/projects/sanplan'
-    },
-    {
-        title: 'Sarazamecznik.com',
-        description: 'Freelance work: portfolio page for artist client',
-        image: '/images/projects/sara/sara1.png',
-        url: '/projects/sara'
-    },
-    {
-        title: 'Insultifier',
-        description: 'Clap back quickly',
-        image: '/images/projects/insultifier/index.png',
-        url: '/projects/insultifier'
-    },
-    {
-        title: 'Greentalk',
-        description: 'Forum for environmental discussion',
-        image: '/images/projects/greentalk/greentalk.jpg',
-        url: '/projects/greentalk'
-    },
-    {
-        title: 'MovieMatch',
-        description: 'Movie night made easy',
-        image: '/images/projects/moviematch/moviematch.png',
-        url: '/projects/moviematch'
-    },
-];
+
 
 const containerVariants = {
     hidden: { opacity: 1 },
@@ -69,6 +33,45 @@ const itemVariants = {
 
 export default function Projects() {
     const { t } = useTranslation();
+
+    const projects = [
+        {
+            title: 'PartnerSOS',
+            description: t('projectsIndex.descriptions.partnersos'),
+            image: '/images/projects/partnersos/logo.png',
+            url: '/projects/partnersos'
+        },
+        {
+            title: 'SanPlan',
+            description: t('projectsIndex.descriptions.sanplan'),
+            image: '/images/projects/sanplan/index.png',
+            url: '/projects/sanplan'
+        },
+        {
+            title: 'Sarazamecznik.com',
+            description: t('projectsIndex.descriptions.sara'),
+            image: '/images/projects/sara/sara1.png',
+            url: '/projects/sara'
+        },
+        {
+            title: 'Insultifier',
+            description: t('projectsIndex.descriptions.insultifier'),
+            image: '/images/projects/insultifier/index.png',
+            url: '/projects/insultifier'
+        },
+        {
+            title: 'Greentalk',
+            description: t('projectsIndex.descriptions.greentalk'),
+            image: '/images/projects/greentalk/greentalk.jpg',
+            url: '/projects/greentalk'
+        },
+        {
+            title: 'MovieMatch',
+            description: t('projectsIndex.descriptions.moviematch'),
+            image: '/images/projects/moviematch/moviematch.png',
+            url: '/projects/moviematch'
+        },
+    ];
 
     return (
         <section className='bg-black'>

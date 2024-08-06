@@ -1,88 +1,109 @@
 {
-    "nav": {
-        "projects": "Prosjekter",
-        "contact": "Kontakt meg",
-        "resume": "CV"
-    },
-    "landing": {
-        "greeting": "Hei",
-        "im": "Jeg er",
-        "jobtitle": "Full stack-utvikler",
-        "location": "Oslo, Norge",
-        "projects": "Prosjekter",
-        "imageAlt": "Et bilde av meg"
-    },
-    "projects":{
-        "title": "Prosjekter",
-        "seeAll": "Se alle"  
-    },
-    "footer": {
-        "aboutUs": "Om meg",
-        "developedBy": "Utviklet av ",
-        "socials": "Sosiale medier",
-        "contact": {
-            "title": "Kontakt meg",
-            "form": {
-                "email": "Epost",
-                "message": "Melding",
-                "submit": "Send melding"
-            },
-            "success": {
-                "messageSent": "Melding sendt!",
-                "sendNew": "Tilbake"
-            }
-        }
-    },
-    "notFound": {
-        "title": "Siden ble ikke funnet",
-        "description": "Denne siden ser ut til å ikke eksistere. <0>Klikk her</0> for å gå tilbake til hjemmesiden."
-    },
-    "resume": {
-        "jobtitle": "Full stack-utvikler",
-        "location": "Oslo, Norge",
-        "summary": "utvikler",
-        "experience": {
-            "title": "Erfaring",
-            "fsd": "Systemutvikler",
-            "laft": "LAFT Software AS",
-            "laftDate": "Oktober 2021 - Mars 2024",
-            "machinist": "Kioskmedarbeider og kinomaskinist",
-            "nfkino": "Nordisk Film Kino AS",
-            "nfkinoDate": "Juni 2018 - August 2018"
-        },
-        "education": {
-            "title": "Utdanning",
-            "usn": "Universitetet i Sørøst-Norge",
-            "it": "IT og informasjonssystemer",
-            "bachelor": "Bachelorgrad",
-            "bachelorDate": "August 2018 - Juni 2021",
-            "vgs": "Horten Videregående skole",
-            "field": "Studiespesialisering",
-            "vgsDate": "August 2013 - Mai 2016"
-        },
-        "skills": {
-            "title": "Ferdigheter",
-            "other": "Annet"
-        },
-        "languages": {
-            "title": "Språk",
-            "norwegian": "Norsk",
-            "english": "Engelsk",
-            "kurdish": "Kurdisk",
-            "turkish": "Tyrkisk",
-            "german": "Tysk"
-        },
-        "footer": {
-            "title": "Liker du hva du ser?",
-            "prompt": "Last ned min CV",
-            "download": "Last ned"
-        }
-    },
-    "projectsIndex":{},
-    "greentalk":{},
-    "sanplan":{},
-    "insultifier":{},
-    "moviematch":{},
-    "partnersos":{},
-    "sara":{}
+	"nav": {
+		"projects": "Prosjekter",
+		"contact": "Kontakt meg",
+		"resume": "CV"
+	},
+	"landing": {
+		"greeting": "Hei",
+		"im": "Jeg er",
+		"jobtitle": "Full stack-utvikler",
+		"location": "Oslo, Norge",
+		"projects": "Prosjekter",
+		"imageAlt": "Et bilde av meg"
+	},
+	"projects": {
+		"title": "Prosjekter",
+		"seeAll": "Se alle"
+	},
+	"footer": {
+		"aboutUs": "Om meg",
+		"developedBy": "Utviklet av ",
+		"socials": "Sosiale medier",
+		"contact": {
+			"title": "Kontakt meg",
+			"form": {
+				"email": "Epost",
+				"message": "Melding",
+				"submit": "Send melding"
+			},
+			"success": {
+				"messageSent": "Melding sendt!",
+				"sendNew": "Tilbake"
+			}
+		}
+	},
+	"notFound": {
+		"title": "Siden ble ikke funnet",
+		"description": "Denne siden ser ut til å ikke eksistere. <0>Klikk her</0> for å gå tilbake til hjemmesiden."
+	},
+	"resume": {
+		"jobtitle": "Full stack-utvikler",
+		"location": "Oslo, Norge",
+		"summary": "utvikler",
+		"experience": {
+			"title": "Erfaring",
+			"fsd": "Systemutvikler",
+			"laft": "LAFT Software AS",
+			"laftDate": "Oktober 2021 - Mars 2024",
+			"machinist": "Kioskmedarbeider og kinomaskinist",
+			"nfkino": "Nordisk Film Kino AS",
+			"nfkinoDate": "Juni 2018 - August 2018"
+		},
+		"education": {
+			"title": "Utdanning",
+			"usn": "Universitetet i Sørøst-Norge",
+			"it": "IT og informasjonssystemer",
+			"bachelor": "Bachelorgrad",
+			"bachelorDate": "August 2018 - Juni 2021",
+			"vgs": "Horten Videregående skole",
+			"field": "Studiespesialisering",
+			"vgsDate": "August 2013 - Mai 2016"
+		},
+		"skills": {
+			"title": "Ferdigheter",
+			"other": "Annet"
+		},
+		"languages": {
+			"title": "Språk",
+			"norwegian": "Norsk",
+			"english": "Engelsk",
+			"kurdish": "Kurdisk",
+			"turkish": "Tyrkisk",
+			"german": "Tysk"
+		},
+		"footer": {
+			"title": "Liker du hva du ser?",
+			"prompt": "Last ned min CV",
+			"download": "Last ned"
+		}
+	},
+	"projectsIndex": {
+		"descriptions": {
+			"greentalk": "Forum for miljødiskusjoner",
+			"sanplan": "Huskeliste app",
+			"insultifier": "Genererer fornærmelser",
+			"moviematch": "Gjør filmkvelder enklere",
+			"partnersos": "Voldsalarm / nødvarsling",
+			"sara": "Frilans arbeid: Portefølje side for en kunstner"
+		}
+	},
+	"partnersos": {
+		"description": "Voldsalarm / nødvarsling",
+		"date": "8 Juli, 2024",
+		"intro": "PartnerSOS gir brukerne muligheten til å dele sin posisjon med sine partnere umiddelbart når de føler seg utrygge. I motsetning til apper som Messenger eller Snapchat, krever PartnerSOS bare ett trykk, noe som sikrer en rask og effektiv varsling. Ved aktivering mottar partneren en SMS med en lenke for å se brukerens posisjon via en webapp. Posisjonen oppdateres i sanntid og kan åpnes direkte i Google Maps for presis navigasjon. Denne strømlinjeformede tilnærmingen sikrer at brukerne kan søke hjelp raskt og enkelt, spesielt i stressende situasjoner.",
+		"inspirationHeader": "Inspirasjon",
+		"inspiration": "Ideen til PartnerSOS kom fra en personlig opplevelse med en venn. Denne vennen gikk hjem etter jobb da de la merke til at en kunde fulgte etter dem. Selv om de ikke følte seg truet nok til å ringe politiet, ønsket de at partneren skulle være klar over situasjonen umiddelbart. Denne hendelsen fremhevet behovet for en enkel, men effektiv måte å dele sin posisjon på, selv om mobildata er slått av.",
+		"developmentHeader": "Utvikling",
+		"development": "Som utvikler så jeg potensialet til å lage en rask og pålitelig løsning. PartnerSOS er bygget ved hjelp av Expo Go og Firebase.",
+		"expoGoDetails": "Et React Native-rammeverk som akselererer apputvikling ved å tilby robuste utviklerverktøy.",
+		"firebaseDetails": "En pakke med skybaserte utviklingsverktøy som hjelper til med å bygge, distribuere og skalere mobilapper. Jeg brukte Firebase Authentication, Firestore DB og Cloud Functions.",
+		"experienceHeader": "Erfaring",
+		"experience": "Å utvikle PartnerSOS var en givende oppgave, spesielt siden min bakgrunn hovedsakelig er innen webutvikling. Å bruke React Native tillot meg å bruke mine webutviklingsferdigheter (JSX, TSX) til å lage en mobilapp. Uavhengig av populariteten ga dette prosjektet uvurderlig erfaring innen mobilapputvikling."
+	},
+	"greentalk": {},
+	"sanplan": {},
+	"insultifier": {},
+	"moviematch": {},
+	"sara": {}
 }

@@ -12,10 +12,10 @@ export async function getStaticProps({ locale }: { locale: string }) {
     },
   }
 }
-const { t } = useTranslation();
 
 
 export default function Greentalk() {
+    const { t } = useTranslation();
     return (
         <section className="px-5 md:px-0">
             {/* heading and image gallery */}
