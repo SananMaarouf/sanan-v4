@@ -104,7 +104,7 @@
 	},
 	"greentalk": {
 		"description": "If you love our planet, you will love Greentalk",
-		"date": "March 18, 2021",
+		"date": "March 18th, 2021",
 		"intro": "In our second year of university, we were tasked with creating a CRUD application for our semester assignment. After some time debating what kind of site and what it should be about, we landed on a forum for environmentalistssince global warming, climate change, and pollution are becoming bigger problems, we wanted to create a space where like minded people could communicate and start events to meet up.",
 		"group": "My group consisted of: "
 	},
@@ -138,7 +138,7 @@
 	},
 	"insultifier": {
 		"description": "Clap back quicly",
-		"date": "May, 6th 2024",
+		"date": "May 6th, 2024",
 		"intro": "Are you immature? or very sarcastic? Then insult.sanan.no is the perfect tool for you!",
 		"intro2": "The insultifier is a tool i made to quickly clap back at my friends when they say something stupid in the group chat, but it works great in a corporate environment....i think.",
 		"howItWorks": "You write in a sentence such as \"noooo sanan, you cannot just drop the database because you were trying to free up space\". and it returns \"nOoOo sAnAn, YoU CaNnOt jUsT DrOp tHe dAtAbAsE BeCaUsE YoU WeRe tRyInG To fReE Up sPaCe\""
