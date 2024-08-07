@@ -110,14 +110,14 @@
 	},
 	"sanplan": {
 		"description": "Enkel todo-app laget med Expo Go",
-		"date": "5. mars 2024",
+		"date": "5 Mars, 2024",
 		"intro": "Dette er min todo-app laget med React Native, Expo Go og Expo Router.",
 		"story": "Det er mitt utgangspunkt for å lage universelle mobilapper ved hjelp av JSX, en syntaksutvidelse for JavaScript som lar utviklere skrive HTML-lignende kode inne i en JavaScript-fil. I begynnelsen er målet mitt med denne appen å lage en funksjonell og pen todo-app som kjører på Android/iOS.",
 		"github": "Om du er interessert i koden så kan du finne den på "
 	},
 		"sara": {
 		"description": "Porteføljeside for kunstneren Sara Zamecznik",
-		"date": "27. februar 2024",
+		"date": "27 Februar, 2024",
 		"intro": "Dette var et spennende prosjekt å gjøre.",
 		"intro2": "Min klient, Sara Zamecznik, er kunststudent ved KHIO i Oslo. Hun er en dyktig kunstner som skaper kunst i ulike medier, med spesialisering i keramikk.",
 		"intro3": "Da jeg fikk vite at hun snart skulle uteksamineres og hadde vist frem kunsten sin utelukkende på Instagram, innså jeg behovet for en mer profesjonell plattform—en eksklusiv nettside.",
@@ -138,14 +138,14 @@
 	},
 		"insultifier": {
 		"description": "Svar raskt tilbake",
-		"date": "6. mai 2024",
+		"date": "6 Mai, 2024",
 		"intro": "Er du umoden? eller veldig sarkastisk? Da er insult.sanan.no det perfekte verktøyet for deg!",
 		"intro2": "Insultifier er et verktøy jeg laget for raskt å kunne svare tilbake til vennene mine når de sier noe dumt i gruppesamtalen, men det fungerer også bra i et bedriftsmiljø... tror jeg.",
 		"howItWorks": "Du skriver inn en setning som for eksempel \"neeeei sanan, du kan ikke bare slette databasen fordi du prøvde å frigjøre plass\". og det returnerer \"nEeEeI sAnAn, dU kAn IkKe BaRe SlEtTe DaTaBaSeN fOrDi Du PrØvDe Å fRiGjØrE pLaSs\""
 	},
 		"moviematch": {
 		"description": "Krangler du og partneren din stadig om hvilke filmer dere skal se? Movie Match kan være løsningen på problemene deres",
-		"date": "18. mars 2021",
+		"date": "18 Mars, 2021",
 		"story": "I vårt andre år på universitetet fikk vi i oppgave å lage en praktisk Android-app til semesteroppgaven vår. Gruppen min brukte litt tid på å snakke om våre prøvelser og utfordringer, og hvordan en app kunne løse dem. Det viser seg at terapi er løsningen på de fleste av dem, men det som kunne løses var problemet med å finne en film som alle liker på filmkvelder, og dermed ble ideen født.",
 		"group": "Gruppen min besto av: "
 	}
