@@ -2,7 +2,8 @@
 	"nav": {
 		"projects": "Projects",
 		"contact": "Contact me",
-		"resume": "Resume"
+		"resume": "Resume",
+		"language": "Language"
 	},
 	"landing": {
 		"greeting": "Hello",

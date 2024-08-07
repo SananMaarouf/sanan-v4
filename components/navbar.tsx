@@ -2,23 +2,38 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTimes, faHome } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faTimes, faHome, faEarthEurope, faCaretDown, faCheck } from '@fortawesome/free-solid-svg-icons';
 import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuLabel,
+    DropdownMenuSeparator,
+    DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+
 
 export default function Navbar() {
     const { t, i18n } = useTranslation();
     const router = useRouter();
     const [menuOpen, setMenuOpen] = useState(false);
+    const [dropdownOpen, setDropdownOpen] = useState(false);
+
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     };
 
-    const switchLanguage = () => {
-        const newLang = i18n.language === 'en' ? 'nb' : 'en';
-        i18n.changeLanguage(newLang);
-        router.push(router.pathname, router.asPath, { locale: newLang });
+    const toggleDropdown = () => {
+        setDropdownOpen(!dropdownOpen);
+    };
+
+    const switchLanguage = (lang: string) => {
+        i18n.changeLanguage(lang);
+        router.push(router.pathname, router.asPath, { locale: lang });
+        setDropdownOpen(false);
     };
 
     const menuVariants = {
@@ -117,17 +132,29 @@ export default function Navbar() {
                         </motion.button>
                     </Link>
                     {/* Language Switcher */}
-                    <motion.button
-                        className='hover:underline underline-offset-2'
-                        whileHover={{
-                            scale: 1.2,
-                            transition: { duration: 0.2 },
-                        }}
-                        whileTap={{ scale: 1.2, transition: { duration: 0.2 } }}
-                        onClick={switchLanguage}
-                    >
-                        {i18n.language === 'en' ? 'Norsk' : 'English'}
-                    </motion.button>
+                    <motion.div variants={itemVariants} className='px-0.5 w-32 rounded-md bg-black border border-black'>
+                        <div className='flex flex-row w-full border-2 border-black justify-between hover:border-2 hover:border-white rounded-md' onClick={toggleDropdown}>
+                            <div className='flex flex-row items-center w-full'>
+                                <FontAwesomeIcon icon={faEarthEurope} size='sm' />
+                                <p className='ml-2'>
+                                    {i18n.language === 'nb' ? 'Norsk' : 'English'}
+                                </p>
+                            </div>
+                            <FontAwesomeIcon icon={faCaretDown} className={`mr-2 my-auto transition-transform duration-300 ${dropdownOpen ? 'rotate-180' : ''}`} />
+                        </div>
+                        {dropdownOpen && (
+                            <div className='mt-2 w-32 rounded-md border-2 absolute z-10 border-white'>
+                                <button onClick={() => switchLanguage('nb')} className='text-left w-full py-2 px-2 flex justify-between items-center hover:bg-white hover:text-black'>
+                                    Norsk 🇳🇴
+                                    {i18n.language === 'nb' && <FontAwesomeIcon icon={faCheck} />}
+                                </button>
+                                <button onClick={() => switchLanguage('en')} className='text-left w-full py-2 px-2 flex justify-between items-center hover:bg-white hover:text-black'>
+                                    English 🇬🇧
+                                    {i18n.language === 'en' && <FontAwesomeIcon icon={faCheck} />}
+                                </button>
+                            </div>
+                        )}
+                    </motion.div>
                 </section>
             </motion.div>
             <motion.div
@@ -146,7 +173,7 @@ export default function Navbar() {
                             }}
                             whileTap={{ scale: 1.2, transition: { duration: 0.2 } }}
                         >
-                        <FontAwesomeIcon icon={faHome} size='2x' className='' />
+                            <FontAwesomeIcon icon={faHome} size='2x' className='' />
                         </motion.button>
                     </Link>
                 </section>
@@ -155,7 +182,7 @@ export default function Navbar() {
                     {/* if menu is open (true) render the X icon */}
                     {menuOpen ?
                         <AnimatePresence initial={false} mode='wait'>
-                            <motion.button 
+                            <motion.button
                                 key={"close"}
                                 exit={{ opacity: 0, }}
                                 transition={{ duration: 0.3 }}
@@ -163,9 +190,9 @@ export default function Navbar() {
                                     scale: 1.2,
                                     transition: { duration: 0.2 },
                                 }}
-                                whileTap={{ scale: 1.2, transition: { duration: 0.2 }}
+                                whileTap={{ scale: 1.2, transition: { duration: 0.2 } }
                                 }
-                                onClick={toggleMenu} 
+                                onClick={toggleMenu}
                                 className='btn w-10 h-10 z-50'>
                                 <FontAwesomeIcon icon={faTimes} size='2x' />
                             </motion.button>
@@ -174,18 +201,18 @@ export default function Navbar() {
                         /* if menu is not open, render the 3 bars icon */
                         <AnimatePresence initial={false} mode='wait'>
                             <motion.button
-                                key={"open"} 
+                                key={"open"}
                                 exit={{ opacity: 0, }}
                                 transition={{ duration: 0.3 }}
                                 whileHover={{
                                     scale: 1.2,
                                     transition: { duration: 0.1 },
                                 }}
-                                whileTap={{ 
+                                whileTap={{
                                     scale: 1.2,
                                     transition: { duration: 0.1 },
                                 }}
-                                onClick={toggleMenu} 
+                                onClick={toggleMenu}
                                 className='btn w-10 h-10 z-50'>
                                 <FontAwesomeIcon icon={faBars} size='2x' />
                             </motion.button>
@@ -202,7 +229,7 @@ export default function Navbar() {
                             key={"menu"}
                             initial='hidden'
                             animate='visible'
-                            exit={{ display:"hidden", opacity: 0, x: 100 }}
+                            exit={{ display: "hidden", opacity: 0, x: 100 }}
                             variants={menuVariants}
                             transition={{ type: 'tween', duration: 0.2 }}
                             className='rounded-l-3xl fixed z-30 top-0 right-0 w-3/4 h-full bg-black border border-white'
@@ -210,12 +237,12 @@ export default function Navbar() {
                             <section className='flex flex-col space-y-10 p-10 mt-10 text-3xl'>
                                 <motion.div variants={itemVariants}>
                                     <Link onClick={toggleMenu} href={"/projects"} className='hover:underline underline-offset-2'>
-                                    {t('nav.projects')}
+                                        {t('nav.projects')}
                                     </Link>
                                 </motion.div>
                                 <motion.div variants={itemVariants}>
                                     <Link onClick={toggleMenu} href={"/resume"} className='hover:underline underline-offset-2'>
-                                    {t('nav.resume')}
+                                        {t('nav.resume')}
                                     </Link>
                                 </motion.div>
                                 <motion.div variants={itemVariants}>
@@ -225,14 +252,32 @@ export default function Navbar() {
                                 </motion.div>
                                 <motion.div variants={itemVariants}>
                                     <Link onClick={toggleMenu} href={"#contact"} className='hover:underline underline-offset-2'>
-                                    {t('nav.contact')}
+                                        {t('nav.contact')}
                                     </Link>
                                 </motion.div>
                                 {/* Language Switcher */}
-                                <motion.div variants={itemVariants}>
-                                    <button onClick={switchLanguage} className='hover:underline underline-offset-2'>
-                                        {i18n.language === 'en' ? 'Norsk' : 'English'}
-                                    </button>
+                                <motion.div variants={itemVariants} className='px-0.5 rounded-md bg-black border border-black'>
+                                    <div className='flex flex-row w-full border-2 border-black justify-between hover:border-2 hover:border-white rounded-md' onClick={toggleDropdown}>
+                                        <div className='flex flex-row items-center w-full'>
+                                            <FontAwesomeIcon icon={faEarthEurope} size='sm' />
+                                            <p className='ml-2'>
+                                                {i18n.language === 'nb' ? 'Norsk' : 'English'}
+                                            </p>
+                                        </div>
+                                        <FontAwesomeIcon icon={faCaretDown} className={`mr-2 my-auto transition-transform duration-300 ${dropdownOpen ? 'rotate-180' : ''}`} />
+                                    </div>
+                                    {dropdownOpen && (
+                                        <div className='mt-2 rounded-md border-2 border-white'>
+                                            <button onClick={() => switchLanguage('nb')} className='text-left w-full py-2 px-2 flex justify-between items-center hover:bg-white hover:text-black'>
+                                                Norsk 🇳🇴
+                                                {i18n.language === 'nb' && <FontAwesomeIcon icon={faCheck} />}
+                                            </button>
+                                            <button onClick={() => switchLanguage('en')} className='text-left w-full py-2 px-2 flex justify-between items-center hover:bg-white hover:text-black'>
+                                                English 🇬🇧
+                                                {i18n.language === 'en' && <FontAwesomeIcon icon={faCheck} />}
+                                            </button>
+                                        </div>
+                                    )}
                                 </motion.div>
                             </section>
                         </motion.section>

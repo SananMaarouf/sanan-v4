@@ -2,7 +2,8 @@
 	"nav": {
 		"projects": "Prosjekter",
 		"contact": "Kontakt meg",
-		"resume": "CV"
+		"resume": "CV",
+		"language": "Språk"
 	},
 	"landing": {
 		"greeting": "Hei",
