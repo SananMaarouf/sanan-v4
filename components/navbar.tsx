@@ -135,7 +135,7 @@ export default function Navbar() {
                     <motion.div variants={itemVariants} className='px-0.5 w-32 rounded-md bg-black border border-black'>
                         <div className='flex flex-row w-full border-2 border-black justify-between hover:border-2 hover:border-white rounded-md' onClick={toggleDropdown}>
                             <div className='flex flex-row items-center w-full'>
-                                <FontAwesomeIcon icon={faEarthEurope} size='sm' />
+                                <FontAwesomeIcon icon={faEarthEurope} size='sm' className='ml-2'/>
                                 <p className='ml-2'>
                                     {i18n.language === 'nb' ? 'Norsk' : 'English'}
                                 </p>
