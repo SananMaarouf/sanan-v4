@@ -2,44 +2,48 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Card, CardContent } from "@/components/ui/card"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { useTranslation } from 'next-i18next';
-import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
-} from "@/components/ui/carousel"
 
-const projects = [
-    {
-        title: 'PartnerSOS',
-        image: '/images/projects/partnersos/logo.png',
-        url: '/projects/partnersos'
-    },
-    {
-        title: 'SanPlan',
-        image: '/images/projects/sanplan/index.png',
-        url: '/projects/sanplan'
-    },
-    {
-        title: 'Artist portfolio',
-        image: '/images/projects/sara/sara1.png',
-        url: '/projects/sara'
-    },
-    {
-        title: 'Insultifier',
-        image: '/images/projects/insultifier/index.png',
-        url: '/projects/insultifier'
-    },
-];
+import {
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
+} from "@/components/ui/accordion"
+
 
 export default function Projects() {
     const { t } = useTranslation();
     const [isHovered, setIsHovered] = useState(false);
+
+    const projects = [
+        {
+            title: 'PartnerSOS',
+            description: t('projectsIndex.descriptions.partnersos'),
+            image: '/images/projects/partnersos/logo.png',
+            url: '/projects/partnersos'
+        },
+        {
+            title: 'Artist portfolio',
+            description: t('projectsIndex.descriptions.sara'),
+            image: '/images/projects/sara/sara1.png',
+            url: '/projects/sara'
+        },
+        {
+            title: 'SanPlan',
+            description: t('projectsIndex.descriptions.sanplan'),
+            image: '/images/projects/sanplan/index.png',
+            url: '/projects/sanplan'
+        },
+        {
+            title: 'Insultifier',
+            description: t('projectsIndex.descriptions.insultifier'),
+            image: '/images/projects/insultifier/index.png',
+            url: '/projects/insultifier'
+        },
+    ];
 
     const slideProps = {
         initial: { opacity: 0, x: +100 },
@@ -53,7 +57,7 @@ export default function Projects() {
             initial={{ y: 100, opacity: 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9 }}
-            className='flex flex-col justify-center md:mx-auto md:w-3/4 lg:my-10'
+            className='flex flex-col justify-center md:mx-auto md:w-3/4 lg:w-1/2'
         >
             {/* heading and nav */}
             <div className='flex flex-row place-content-between items-center'>
@@ -77,35 +81,37 @@ export default function Projects() {
                     </Link>
                 </motion.div>
             </div>
-            {/* carousel */}
-            <div className='px-14'>
-                <Carousel opts={{ align: "start" }}>
-                    <CarouselContent>
-                        {projects.map((project, index) => (
-                            <CarouselItem key={index} className="md:h-52 md:basis-1/2 lg:basis-1/3 lg:h-72">
-                                <Link href={project.url}>
-                                    <Card className='bg-transparent h-full overflow-clip border border-white'>
-                                        <CardContent className="flex flex-col aspect-square items-center ">
-                                            <div className='h-2/3 md:h-1/2 overflow-clip'>
-                                                <Image
-                                                    src={project.image}
-                                                    alt={project.title}
-                                                    width={400}
-                                                    height={400}
-                                                    className='object-contain h-full'
-                                                />
-                                            </div>
-                                            <h3 className='text-2xl content-center text-center h-1/3 w-full rounded-t-md md:content-start md:pt-3 lg:pt-6 '>{project.title}</h3>
-                                        </CardContent>
-                                    </Card>
-                                </Link>
-                            </CarouselItem>
-                        ))}
-                    </CarouselContent>
-                    <CarouselPrevious />
-                    <CarouselNext />
-                </Carousel>
-            </div>
+
+            {/* accordion */}
+            <Accordion type="single" collapsible>
+                {projects.map((project, index) => (
+                    <AccordionItem key={index} value={`item-${index}`}>
+                        <AccordionTrigger className="text-2xl">{project.title}</AccordionTrigger>
+                        <AccordionContent>
+                            <Link href={project.url}>
+                                <div className='grid grid-cols-2 max-h-60 border overflow-clip border-white'>
+                                    <div className='flex items-center justify-center'>
+                                        <h3 className='text-2xl'>
+                                            {project.description}
+                                        </h3>
+                                    </div>
+                                    <div className='flex items-center justify-center'>
+                                        <Image
+                                            src={project.image}
+                                            alt={project.title}
+                                            width={400}
+                                            height={400}
+                                            className='object-contain h-full'
+                                        />
+                                    </div>
+                                </div>
+                            </Link>
+                        </AccordionContent>
+                    </AccordionItem>
+                ))}
+            </Accordion>
+
+
         </motion.div>
     );
 }
