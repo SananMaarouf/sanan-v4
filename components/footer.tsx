@@ -18,7 +18,7 @@ export default function Footer() {
     return (
         <footer
             id="contact"
-            className="bg-black bg-opacity-90 bg-clip-padding backdrop-blur-sm backdrop-filter"
+            className="bg-opacity-90 bg-clip-padding backdrop-blur-sm backdrop-filter"
         >
             <motion.div {...motionProps}>
                 <div className="pt-10 md:gap-x-28 flex flex-col justify-center border-b pb-5 md:flex-row">

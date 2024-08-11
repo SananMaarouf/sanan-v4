@@ -84,7 +84,7 @@ export default function Projects() {
                         {projects.map((project, index) => (
                             <CarouselItem key={index} className="md:h-52 md:basis-1/2 lg:basis-1/3 lg:h-72">
                                 <Link href={project.url}>
-                                    <Card className='bg-transparent h-full overflow-clip border border-white'>
+                                    <Card className='h-full overflow-clip border border-white'>
                                         <CardContent className="flex flex-col aspect-square items-center ">
                                             <div className='h-2/3 md:h-1/2 overflow-clip'>
                                                 <Image
@@ -95,7 +95,7 @@ export default function Projects() {
                                                     className='object-contain h-full'
                                                 />
                                             </div>
-                                            <h3 className='bg-gray-800 text-2xl content-center text-center h-1/3 w-full rounded-t-md md:content-start md:pt-3 lg:pt-6 '>{project.title}</h3>
+                                            <h3 className='text-2xl content-center text-center h-1/3 w-full rounded-t-md md:content-start md:pt-3 lg:pt-6 '>{project.title}</h3>
                                         </CardContent>
                                     </Card>
                                 </Link>

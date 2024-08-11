@@ -13,7 +13,7 @@ export async function getStaticProps({ locale }: { locale: string }) {
 
 export default function Home() {
   return (
-    <main className="flex flex-col px-3 bg-black">
+    <main className="flex flex-col px-3 ">
       {/* landing section */}
       <Landing/>
       {/* projects section */}

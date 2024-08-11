@@ -60,7 +60,7 @@ export default function Navbar() {
     };
 
     return (
-        <nav className='px-5 bg-black'>
+        <nav className='px-5 '>
             <motion.div
                 initial={{ y: -100 }}
                 animate={{ y: 0 }}
@@ -132,15 +132,11 @@ export default function Navbar() {
                         </motion.button>
                     </Link>
                     {/* Language Switcher */}
-                    <motion.div variants={itemVariants} className='px-0.5 w-32 rounded-md bg-black border border-black'>
-                        <div className='flex flex-row w-full border-2 border-black justify-between hover:border-2 hover:border-white rounded-md' onClick={toggleDropdown}>
-                            <div className='flex flex-row items-center w-full'>
-                                <FontAwesomeIcon icon={faEarthEurope} size='sm' className='ml-2'/>
-                                <p className='ml-2'>
-                                    {i18n.language === 'nb' ? 'Norsk' : 'English'}
-                                </p>
-                            </div>
-                            <FontAwesomeIcon icon={faCaretDown} className={`mr-2 my-auto transition-transform duration-300 ${dropdownOpen ? 'rotate-180' : ''}`} />
+                    <motion.div variants={itemVariants} className='content-center w-14 rounded-md'>
+                        <div className='flex flex-row w-full py-1 border-2 border-transparent hover:border-2 hover:border-white rounded-md' onClick={toggleDropdown}>
+                            <FontAwesomeIcon icon={faEarthEurope} size='lg' className='ml-2'/>
+                            <FontAwesomeIcon icon={faCaretDown} 
+                                className={`mx-2 my-auto transition-transform duration-300 ${dropdownOpen ? 'rotate-180' : ''}`} />
                         </div>
                         {dropdownOpen && (
                             <div className='mt-2 w-32 rounded-md border-2 absolute z-10 border-white'>
@@ -232,7 +228,7 @@ export default function Navbar() {
                             exit={{ display: "hidden", opacity: 0, x: 100 }}
                             variants={menuVariants}
                             transition={{ type: 'tween', duration: 0.2 }}
-                            className='rounded-l-3xl fixed z-30 top-0 right-0 w-3/4 h-full bg-black border border-white'
+                            className='rounded-l-3xl fixed z-30 top-0 right-0 w-3/4 h-full bg-background border border-white'
                         >
                             <section className='flex flex-col space-y-10 p-10 mt-10 text-3xl'>
                                 <motion.div variants={itemVariants}>
@@ -256,8 +252,8 @@ export default function Navbar() {
                                     </Link>
                                 </motion.div>
                                 {/* Language Switcher */}
-                                <motion.div variants={itemVariants} className='px-0.5 rounded-md bg-black border border-black'>
-                                    <div className='flex flex-row w-full border-2 border-black justify-between hover:border-2 hover:border-white rounded-md' onClick={toggleDropdown}>
+                                <motion.div variants={itemVariants} className='px-0.5 rounded-md border border-transparent'>
+                                    <div className='flex flex-row w-full border-2 border-transparent justify-between hover:border-2 hover:border-white rounded-md' onClick={toggleDropdown}>
                                         <div className='flex flex-row items-center w-full'>
                                             <FontAwesomeIcon icon={faEarthEurope} size='sm' />
                                             <p className='ml-2'>
