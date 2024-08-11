@@ -82,7 +82,6 @@ export default function Resume() {
             <p>
               {t('resume.jobtitle')}
             </p>
-            <p>+47 47264992</p>
             <p>
             {t('resume.location')}
             </p>

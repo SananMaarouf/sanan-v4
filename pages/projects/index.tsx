@@ -74,7 +74,7 @@ export default function Projects() {
     ];
 
     return (
-        <section className='bg-black'>
+        <section className=''>
             {/* projects grid */}
             <motion.section
                 variants={containerVariants}
@@ -115,7 +115,8 @@ export default function Projects() {
                                 md:w-full
                                 rounded-lg 
                                 overflow-clip 
-                                bg-gray-900 
+                                border
+                                border-white 
                                 '>
                             <div className='w-full h-3/4 content-center overflow-clip'>
                                 <Image
