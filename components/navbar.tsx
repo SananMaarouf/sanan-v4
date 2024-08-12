@@ -5,14 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes, faHome, faEarthEurope, faCaretDown, faCheck } from '@fortawesome/free-solid-svg-icons';
 import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuLabel,
-    DropdownMenuSeparator,
-    DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
 
 
 export default function Navbar() {
@@ -134,19 +126,19 @@ export default function Navbar() {
                     {/* Language Switcher */}
                     <motion.div variants={itemVariants} className='content-center w-14 rounded-md'>
                         <div className='flex flex-row w-full py-1 border-2 border-transparent hover:border-2 hover:border-white rounded-md' onClick={toggleDropdown}>
-                            <FontAwesomeIcon icon={faEarthEurope} size='lg' className='ml-2'/>
-                            <FontAwesomeIcon icon={faCaretDown} 
+                            <FontAwesomeIcon icon={faEarthEurope} className='ml-2' />
+                            <FontAwesomeIcon icon={faCaretDown}
                                 className={`mx-2 my-auto transition-transform duration-300 ${dropdownOpen ? 'rotate-180' : ''}`} />
                         </div>
                         {dropdownOpen && (
-                            <div className='mt-2 w-32 rounded-md border-2 absolute z-10 border-white'>
+                            <div className='mt-2 w-32 rounded-md border-2 absolute bg-background z-50 border-red-500'>
                                 <button onClick={() => switchLanguage('nb')} className='text-left w-full py-2 px-2 flex justify-between items-center hover:bg-white hover:text-black'>
                                     Norsk 🇳🇴
-                                    {i18n.language === 'nb' && <FontAwesomeIcon icon={faCheck} />}
+                                    {i18n.language === 'nb' && <FontAwesomeIcon icon={faCheck} size='xs' />}
                                 </button>
                                 <button onClick={() => switchLanguage('en')} className='text-left w-full py-2 px-2 flex justify-between items-center hover:bg-white hover:text-black'>
                                     English 🇬🇧
-                                    {i18n.language === 'en' && <FontAwesomeIcon icon={faCheck} />}
+                                    {i18n.language === 'en' && <FontAwesomeIcon icon={faCheck} size='xs' />}
                                 </button>
                             </div>
                         )}
@@ -266,11 +258,11 @@ export default function Navbar() {
                                         <div className='mt-2 rounded-md border-2 border-white'>
                                             <button onClick={() => switchLanguage('nb')} className='text-left w-full py-2 px-2 flex justify-between items-center hover:bg-white hover:text-black'>
                                                 Norsk 🇳🇴
-                                                {i18n.language === 'nb' && <FontAwesomeIcon icon={faCheck} />}
+                                                {i18n.language === 'nb' && <FontAwesomeIcon icon={faCheck} style={{ fontSize: '1em' }} />}
                                             </button>
                                             <button onClick={() => switchLanguage('en')} className='text-left w-full py-2 px-2 flex justify-between items-center hover:bg-white hover:text-black'>
                                                 English 🇬🇧
-                                                {i18n.language === 'en' && <FontAwesomeIcon icon={faCheck} />}
+                                                {i18n.language === 'en' && <FontAwesomeIcon icon={faCheck} style={{ fontSize: '1em' }} />}
                                             </button>
                                         </div>
                                     )}

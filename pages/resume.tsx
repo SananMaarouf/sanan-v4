@@ -54,9 +54,7 @@ export default function Resume() {
               rounded-lg 
               border-2 
               border-gray-300
-              hover:border-gray-100
-              dark:border-gray-600
-              dark:hover:border-white"
+              hover:border-gray-100"
                 href={cvUrl}
                 download
                 rel="noopener noreferrer"
