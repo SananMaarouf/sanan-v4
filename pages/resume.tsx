@@ -173,8 +173,8 @@ export default function Resume() {
       </section>
       <section>
         <h2 className='font-bold text-2xl'>{t('resume.skills.title')}</h2>
-        {/* Add your skills here */}
-        <section className="flex flex-row">
+        {/* skills here */}
+        <section className="flex flex-col">
           <section className="flex flex-col">
             <div className="items-center pt-3">
               <h3 className="font-bold">Frontend:</h3>
@@ -192,7 +192,7 @@ export default function Resume() {
             <div className="flex items-center pt-3">
               <div className="flex flex-col">
                 <h3 className="font-bold">Backend:</h3>
-                <div className="flex flex-row">
+                <div className="flex flex-row flex-wrap">
                   {backend.map((item, index) => (
                     <p
                       key={index}
@@ -207,7 +207,7 @@ export default function Resume() {
             <div className="flex items-center pt-3">
               <div className="flex flex-col">
                 <h3 className="font-bold">Database:</h3>
-                <div className="flex flex-row">
+                <div className="flex flex-row flex-wrap">
                   {database.map((item, index) => (
                     <p
                       key={index}
@@ -222,7 +222,7 @@ export default function Resume() {
             <div className="flex items-center pt-3">
               <div className="flex flex-col">
                 <h3 className="font-bold">{t("resume.skills.mobile")}</h3>
-                <div className="flex flex-row">
+                <div className="flex flex-row flex-wrap">
                   {mobile.map((item, index) => (
                     <p
                       key={index}
