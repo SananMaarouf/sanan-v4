@@ -116,7 +116,7 @@
 		"description":"Simple todo app create with Expo Go",
 		"date":"March 5th, 2024",
 		"intro":"This is my todo app made with React Native, Expo Go and Expo Router.",
-		"story":"It is my starting point for creating universal mobile apps using JSX, a syntax extension for JavaScript that allows developers to write HTML-like code inside a JavaScript file. %{br} In the beginning, my goal with this app is to create a functional and nice looking todo app that runs on Android/iOS.",
+		"story":"It is my starting point for creating universal mobile apps using JSX, a syntax extension for JavaScript that allows developers to write HTML-like code inside a JavaScript file. In the beginning, my goal with this app is to create a functional and nice looking todo app that runs on Android/iOS.",
 		"github": "If you are interested in the code you can find it on "
 	},
 	"sara": {
