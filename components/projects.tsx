@@ -16,14 +16,14 @@ import {
 
 const projects = [
     {
+        title: 'Applitrack',
+        image: '/images/projects/applitrack/applitrack.png',
+        url: '/projects/applitrack'
+    },
+    {
         title: 'PartnerSOS',
         image: '/images/projects/partnersos/logo.png',
         url: '/projects/partnersos'
-    },
-    {
-        title: 'SanPlan',
-        image: '/images/projects/sanplan/index.png',
-        url: '/projects/sanplan'
     },
     {
         title: 'Artist portfolio',

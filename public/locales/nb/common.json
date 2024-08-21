@@ -85,6 +85,7 @@
 	},
 	"projectsIndex": {
 		"descriptions": {
+			"applitrack": "Jobbsøknad tracker",
 			"greentalk": "Forum for miljødiskusjoner",
 			"sanplan": "Huskeliste app",
 			"insultifier": "Genererer fornærmelser",
@@ -105,6 +106,20 @@
 		"firebaseDetails": "En pakke med skybaserte utviklingsverktøy som hjelper til med å bygge, distribuere og skalere mobilapper. Jeg brukte Firebase Authentication, Firestore DB og Cloud Functions.",
 		"experienceHeader": "Erfaring",
 		"experience": "Å utvikle PartnerSOS var en givende oppgave, spesielt siden min bakgrunn hovedsakelig er innen webutvikling. Å bruke React Native tillot meg å bruke mine webutviklingsferdigheter (JSX, TSX) til å lage en mobilapp. Uavhengig av populariteten ga dette prosjektet uvurderlig erfaring innen mobilapputvikling."
+	},
+	"applitrack": {
+		"description": "Jobbsøknad tracker",
+		"date": "18 august 2024",
+		"intro": "Applitrack er en webapp jeg laget for å spore jobbsøknadene jeg har sendt.",
+		"story": "Jeg laget dette verktøyet fordi jeg pleide å ha et regneark i Google Sheets og Microsoft Excel. Jeg byttet stadig mellom dem og glemte ofte hvilken som var den nyeste. Så jeg laget Applitrack for å se alle søknadene jeg hadde sendt, statusen på dem. Jeg ønsket også å kunne se statistikk over hvor mange søknader jeg hadde sendt, hvor mange jeg hadde fått svar fra og hvor mange jeg hadde fått et intervju fra.",
+		"techStack": {
+			"nextjs": "som JS-rammeverk",
+			"tailwind": "for styling",
+			"supabase": "for autentisering og database",
+			"vercel": "for hosting"
+		},
+		"nextJsExperience": "Å utvikle med Next.js var hyggelig, takket være innebygde verktøy som bildeoptimalisering og ruting. Hosting på Vercel, som er skreddersydd for Next.js, var sømløst. Tailwind CSS muliggjorde rask UI-utvikling, noe som gjorde det enkelt å lage responsive komponenter.",
+		"supabase": "Implementering av supabase i et nextjs-prosjekt var veldig rett frem og deres dokumentasjon er veldig bra."
 	},
 	"greentalk": {
 		"description": "Om du elsker planeten, vil du elske GreenTalk",

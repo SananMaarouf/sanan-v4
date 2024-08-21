@@ -36,6 +36,12 @@ export default function Projects() {
 
     const projects = [
         {
+            title: 'Applitrack',
+            description: t('projectsIndex.descriptions.applitrack'),
+            image: '/images/projects/applitrack/applitrack.png',
+            url: '/projects/applitrack'
+        },
+        {
             title: 'PartnerSOS',
             description: t('projectsIndex.descriptions.partnersos'),
             image: '/images/projects/partnersos/logo.png',

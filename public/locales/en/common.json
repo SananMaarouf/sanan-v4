@@ -85,6 +85,7 @@
 	},
 	"projectsIndex": {
 		"descriptions": {
+			"applitrack": "Job application tracker",
 			"greentalk": "Forum for environmental discussion",
 			"sanplan": "Todo app",
 			"insultifier": "Clap back quickly",
@@ -105,6 +106,20 @@
 		"firebaseDetails": "A suite of cloud-based development tools that aid in building, deploying, and scaling mobile apps. I utilized Firebase Authentication, Firestore DB, and Cloud Functions.",
 		"experienceHeader": "Experience",
 		"experience": "Developing PartnerSOS was a rewarding endeavor, especially since my background is primarily in web development. Leveraging React Native allowed me to apply my web development skills (JSX, TSX) to create a mobile app. Regardless of its popularity, this project provided invaluable experience in mobile app development."
+	},
+	"applitrack":{
+		"description": "Job application tracker",
+		"date": "August 18th, 2024",
+		"intro": "Applitrack is a webapp i made to track the job applications i have sent.",
+		"story": "I created this tool because i used to have a spreadsheet in Google Sheets and Microsoft Excel. I kept switching between them and often forgot which one was the most recent. So i created Applitrack to see all the applications i had sent, the status of them. I also wanted to be able to see statistics on how many applications i had sent, how many i had gotten a response from and how many i had gotten an interview from.",
+		"techStack": {
+			"nextjs": "as the JS framework",
+			"tailwind": "for styling",
+			"supabase": "for auth and database",
+			"vercel": "for hosting"
+		},
+		"nextJsExperience": "Developing with Next.js was enjoyable, thanks to its built-in tools like image optimization and routing. Hosting on Vercel, which is tailored for Next.js, was seamless. Tailwind CSS facilitated rapid UI development, making responsive components easy to create.",
+		"supabase": "Implementing supabase in to a nextjs project was very straight forward and their docs are very good."
 	},
 	"greentalk": {
 		"description": "If you love our planet, you will love Greentalk",
