@@ -42,7 +42,7 @@ export default function Applitrack() {
             >
                 <div className="w-full justify-center flex flex-col px-4 pb-2">
                     <h1 className="text-3xl md:text-4xl lg:text-5xl">
-                        Applitrack
+                        Applitrack.no
                     </h1>
                     <p className="mt-2 text-md md:mt-4 md:text-lg lg:text-xl">
                         {t("applitrack.description")}
