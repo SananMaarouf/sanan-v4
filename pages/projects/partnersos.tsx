@@ -72,7 +72,7 @@ export default function PartnerSOS() {
                 lg:w-1/2
                 "
 			>
-				{/* heading and image gallery */}
+				{/* heading and image */}
 				<div className="flex flex-row justify-evenly py-16 text-white w-full">
 					<div className=' content-center pl-3 mb:pl-0'>
 					<h1 className="text-3xl md:text-4xl lg:text-5xl">
@@ -108,7 +108,7 @@ export default function PartnerSOS() {
 						{t("partnersos.inspiration")}
 					</p>
 				</section>
-				<section className="mx-auto md:my-10 w-full rounded-lg bg-gray-600 ">
+				<section className="mx-auto md:my-10 w-4/5 rounded-lg bg-gray-600 ">
 					<Carousel >
 						<CarouselPrevious />
 						<CarouselContent>
