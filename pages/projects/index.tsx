@@ -89,7 +89,8 @@ export default function Projects() {
                 initial="hidden"
                 animate="visible"
                 className="
-                    w-4/5 
+                    w-4/5
+                    lg:w-3/4 
                     py-6 
                     mx-auto 
                     grid 
@@ -127,7 +128,7 @@ export default function Projects() {
                                 border
                                 border-white 
                                 '>
-                                <div className='w-full h-3/4 content-center overflow-clip flex items-center'>
+                                <div className='w-full h-3/4 content-center overflow-clip flex items-center lg:pt-20'>
                                     {project.image}
                                 </div>
                             <div className='h-1/4 px-4'>
