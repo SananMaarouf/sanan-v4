@@ -37,3 +37,14 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Add this to your global CSS file or a relevant CSS module */
+.svg-responsive {
+  width: 300px;
+}
+
+@media (min-width: 1024px) {
+  .svg-responsive {
+      width: 450px;
+  }
+}

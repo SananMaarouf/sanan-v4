@@ -1,20 +1,22 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import Image from 'next/image';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next'
-import { t } from 'i18next';
-
+import ApplitrackSVG from '@/components/projectSVG/applitrackSVG';
+import PartnersosSVG from '@/components/projectSVG/partnersosSVG';
+import SanplanSVG from '@/components/projectSVG/sanplanSVG';
+import SaraSVG from '@/components/projectSVG/saraSVG';
+import InsultifierSVG from '@/components/projectSVG/insultifierSVG';
+import GreentalkSVG from '@/components/projectSVG/greentalkSVG';
+import MoviematchSVG from '@/components/projectSVG/moviematchSVG';
 export async function getStaticProps({ locale }: { locale: string }) {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale)),
-    },
-  }
+    return {
+        props: {
+            ...(await serverSideTranslations(locale)),
+        },
+    }
 }
-
-
 
 const containerVariants = {
     hidden: { opacity: 1 },
@@ -38,43 +40,43 @@ export default function Projects() {
         {
             title: 'Applitrack',
             description: t('projectsIndex.descriptions.applitrack'),
-            image: '/images/projects/applitrack/applitrack.png',
+            image: <ApplitrackSVG height={600} width={600} viewBox={"0 0 600 500"}/>,
             url: '/projects/applitrack'
         },
         {
             title: 'PartnerSOS',
             description: t('projectsIndex.descriptions.partnersos'),
-            image: '/images/projects/partnersos/logo.png',
+            image: <PartnersosSVG height={600} width={600} viewBox={"0 0 600 500"}/>,
             url: '/projects/partnersos'
         },
         {
             title: 'SanPlan',
             description: t('projectsIndex.descriptions.sanplan'),
-            image: '/images/projects/sanplan/index.png',
+            image: <SanplanSVG height={600} width={600} viewBox={"0 0 600 500"}/>,
             url: '/projects/sanplan'
         },
         {
             title: 'Sarazamecznik.com',
             description: t('projectsIndex.descriptions.sara'),
-            image: '/images/projects/sara/sara1.png',
+            image: <SaraSVG height={600} width={600} viewBox={"0 0 600 500"}/>,
             url: '/projects/sara'
         },
         {
             title: 'Insultifier',
             description: t('projectsIndex.descriptions.insultifier'),
-            image: '/images/projects/insultifier/index.png',
+            image: <InsultifierSVG height={600} width={600} viewBox={"0 0 600 500"}/>,
             url: '/projects/insultifier'
         },
         {
             title: 'Greentalk',
             description: t('projectsIndex.descriptions.greentalk'),
-            image: '/images/projects/greentalk/greentalk.jpg',
+            image: <GreentalkSVG height={600} width={600} viewBox={"0 0 600 500"}/>,
             url: '/projects/greentalk'
         },
         {
             title: 'MovieMatch',
             description: t('projectsIndex.descriptions.moviematch'),
-            image: '/images/projects/moviematch/moviematch.png',
+            image: <MoviematchSVG height={600} width={600} viewBox={"0 0 600 500"}/>,
             url: '/projects/moviematch'
         },
     ];
@@ -113,8 +115,9 @@ export default function Projects() {
                                 gap-1 
                                 flex 
                                 h-72 
-                                px-4 
-                                py-2 
+                                bg-white
+                                text-black
+                                pb-3 
                                 w-full 
                                 mx-auto 
                                 flex-col 
@@ -124,16 +127,10 @@ export default function Projects() {
                                 border
                                 border-white 
                                 '>
-                            <div className='w-full h-3/4 content-center overflow-clip'>
-                                <Image
-                                    src={project.image}
-                                    alt={project.title}
-                                    width={400}
-                                    height={300}
-                                    className='rounded-lg mx-auto'
-                                />
-                            </div>
-                            <div className='h-1/4'>
+                                <div className='w-full h-3/4 content-center overflow-clip flex items-center'>
+                                    {project.image}
+                                </div>
+                            <div className='h-1/4 px-4'>
                                 <h2 className='text-xl font-semibold'>{project.title}</h2>
                                 <p className='text-md'>{project.description}</p>
                             </div>

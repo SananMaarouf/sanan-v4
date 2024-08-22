@@ -13,26 +13,30 @@ import {
     CarouselNext,
     CarouselPrevious,
 } from "@/components/ui/carousel"
+import ApplitrackSVG from '@/components/projectSVG/applitrackSVG';
+import PartnersosSVG from '@/components/projectSVG/partnersosSVG';
+import SaraSVG from '@/components/projectSVG/saraSVG';
+import InsultifierSVG from '@/components/projectSVG/insultifierSVG';
 
 const projects = [
     {
         title: 'Applitrack',
-        image: '/images/projects/applitrack/applitrack.png',
+        image: <ApplitrackSVG height={600} width={300} viewBox={"0 0 600 400"} className="svg-responsive"/>,
         url: '/projects/applitrack'
     },
     {
         title: 'PartnerSOS',
-        image: '/images/projects/partnersos/logo.png',
+        image: <PartnersosSVG height={600} width={300} viewBox={"0 0 600 400"} className="svg-responsive"/>,
         url: '/projects/partnersos'
     },
     {
         title: 'Artist portfolio',
-        image: '/images/projects/sara/sara1.png',
+        image: <SaraSVG height={600} width={300} viewBox={"0 0 600 400"} className="svg-responsive"/>,
         url: '/projects/sara'
     },
     {
         title: 'Insultifier',
-        image: '/images/projects/insultifier/index.png',
+        image: <InsultifierSVG height={600} width={300} viewBox={"0 0 600 400"} className="svg-responsive"/>,
         url: '/projects/insultifier'
     },
 ];
@@ -86,14 +90,8 @@ export default function Projects() {
                                 <Link href={project.url}>
                                     <Card className='bg-transparent h-full overflow-clip border border-white'>
                                         <CardContent className="flex flex-col aspect-square items-center ">
-                                            <div className='h-2/3 md:h-1/2 overflow-clip'>
-                                                <Image
-                                                    src={project.image}
-                                                    alt={project.title}
-                                                    width={400}
-                                                    height={400}
-                                                    className='object-contain h-full'
-                                                />
+                                            <div className='h-2/3 md:h-1/2 overflow-clip flex items-center'>
+                                                {project.image}
                                             </div>
                                             <h3 className='text-2xl content-center text-center h-1/3 w-full rounded-t-md md:content-start md:pt-3 lg:pt-6 '>{project.title}</h3>
                                         </CardContent>
