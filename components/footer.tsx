@@ -1,9 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
-import { Link } from 'lucide-react';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { Contact } from './contact';
 import { useTranslation } from 'next-i18next';
 
@@ -34,7 +32,6 @@ export default function Footer() {
                                 Linked
                                 <FontAwesomeIcon 
                                     icon={faLinkedin} 
-                                    style={{  }} 
                                     className='ml-0.5 mr-2 ' 
                                 />
                             </a>
@@ -47,14 +44,22 @@ export default function Footer() {
                                 Github
                                 <FontAwesomeIcon 
                                     icon={faGithub} 
-                                    style={{  }} 
                                     className='ml-0.5 mr-2 ' 
                                 />
                             </a>
-                            
                         </div>
                     </div>
                     <Contact />
+                </div>
+                <div className="text-center my-5">
+                    <a
+                        href="https://streamlinehq.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm underline"
+                    >
+                        Illustrations from Streamline
+                    </a>
                 </div>
             </motion.div>
         </footer>
