@@ -152,8 +152,22 @@ export default function Navbar() {
                 className='flex flex-row items-center place-content-between py-2 md:hidden'
             >
                 {/* home btn */}
-                <section className=''>
-                    <Link href={"/"}>
+                {router.pathname !== '/' ? (
+                    <section>
+                        <Link href={"/"}>
+                            <motion.button
+                                whileHover={{
+                                    scale: 1.2,
+                                    transition: { duration: 0.2 },
+                                }}
+                                whileTap={{ scale: 1.2, transition: { duration: 0.2 } }}
+                            >
+                                <FontAwesomeIcon icon={faHome} size='2x' className='' />
+                            </motion.button>
+                        </Link>
+                    </section>
+                ) : (
+                    <section>
                         <motion.button
                             whileHover={{
                                 scale: 1.2,
@@ -161,12 +175,12 @@ export default function Navbar() {
                             }}
                             whileTap={{ scale: 1.2, transition: { duration: 0.2 } }}
                         >
-                            <FontAwesomeIcon icon={faHome} size='2x' className='' />
+                            <h2 className='font-bold text-3xl'>SM</h2>
                         </motion.button>
-                    </Link>
-                </section>
+                    </section>
+                )}
                 {/* nav menu mobile */}
-                <section className='z-50'>
+                <section className='z-50 ml-auto'>
                     {/* if menu is open (true) render the X icon */}
                     {menuOpen ?
                         <AnimatePresence initial={false} mode='wait'>
