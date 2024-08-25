@@ -57,7 +57,7 @@ export default function Projects() {
             initial={{ y: 100, opacity: 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9 }}
-            className='flex flex-col justify-center md:mx-auto md:w-3/4 lg:my-10'
+            className='flex flex-col justify-center my-10 md:mx-auto md:w-3/4'
         >
             {/* heading and nav */}
             <div className='flex flex-row place-content-between items-center'>
@@ -93,7 +93,7 @@ export default function Projects() {
                                             <div className='h-2/3 md:h-1/2 overflow-clip flex items-center'>
                                                 {project.image}
                                             </div>
-                                            <h3 className='text-2xl content-center text-center h-1/3 w-full rounded-t-md md:content-start md:pt-3 lg:pt-6 '>{project.title}</h3>
+                                            <h3 className='text-2xl bg-white text-background border border-t-white content-center text-center h-1/3 w-full md:content-start md:pt-3 lg:pt-6 '>{project.title}</h3>
                                         </CardContent>
                                     </Card>
                                 </Link>

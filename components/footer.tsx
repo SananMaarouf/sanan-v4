@@ -19,7 +19,7 @@ export default function Footer() {
             className="bg-opacity-90 bg-clip-padding backdrop-blur-sm backdrop-filter"
         >
             <motion.div {...motionProps}>
-                <div className="pt-10 md:gap-x-28 flex flex-col justify-center border-b pb-5 md:flex-row">
+                <div className="pt-10 md:gap-x-28 flex flex-col justify-center border-t pb-5 md:flex-row">
                     <div>
                         <h2 className="text-center text-3xl">{t("footer.socials")}</h2>
                         <div className="flex md:gap-x-4 flex-row place-content-evenly w-full mt-2 md:mt-5 md:w-44">
